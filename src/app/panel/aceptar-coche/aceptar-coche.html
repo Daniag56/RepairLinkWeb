@@ -1,1 +1,61 @@
-<p>aceptar-coche works!</p>
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Panel · Cita de hoy, 16:30</p>
+      <h1 class="text-[30px] font-bold text-marino">Aceptar coche</h1>
+    </div>
+    <button type="button" class="btn-secundario">Volver al panel</button>
+  </header>
+
+  <div class="flex items-start gap-6">
+    <form class="tarjeta flex min-w-0 flex-1 flex-col gap-5 p-7">
+      <h2 class="text-lg font-bold text-marino">Datos de la entrada</h2>
+
+      <div>
+        <span class="etiqueta">Cliente</span>
+        <div class="flex h-[70px] items-center gap-3 rounded-xl border border-[#dce3e6] bg-white px-3">
+          <span class="avatar size-11 text-[15px]">ML</span>
+          <span class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
+            <span class="text-[15px] font-semibold text-texto">Marta López</span>
+            <span class="text-[13px] text-texto-suave">Cita de hoy · 16:30</span>
+          </span>
+          <span class="badge-naranja shrink-0">Cliente nuevo</span>
+        </div>
+      </div>
+
+      <div class="flex gap-4">
+        <label class="min-w-0 flex-1">
+          <span class="etiqueta">Vehículo</span>
+          <span class="campo flex items-center justify-between">SEAT León · 7730 HPT<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span>
+        </label>
+        <label class="min-w-0 flex-1">
+          <span class="etiqueta">Motivo de la visita</span>
+          <span class="campo flex items-center justify-between">Revisión de frenos<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span>
+        </label>
+      </div>
+
+      <label>
+        <span class="etiqueta">Kilómetros a la entrada</span>
+        <input type="text" class="campo" placeholder="Ej.: 84 500" />
+      </label>
+
+      <label>
+        <span class="etiqueta">Observaciones</span>
+        <textarea class="campo h-[110px] resize-none py-3" placeholder="Estado del coche a la entrada"></textarea>
+      </label>
+
+      <div class="flex justify-end">
+        <button type="button" class="btn-primario">Aceptar coche en el taller</button>
+      </div>
+    </form>
+
+    <aside class="tarjeta flex w-[380px] shrink-0 flex-col gap-3.5 p-6 text-sm">
+      <h2 class="mb-1 text-lg font-bold text-marino">Resumen de la cita</h2>
+      <div class="flex h-[30px] justify-between whitespace-nowrap"><span class="text-texto-suave">Hora</span><span class="font-semibold text-texto">Hoy · 16:30</span></div>
+      <div class="flex h-[30px] justify-between whitespace-nowrap"><span class="text-texto-suave">Cliente</span><span class="font-semibold text-texto">Marta López</span></div>
+      <div class="flex h-[30px] justify-between whitespace-nowrap"><span class="text-texto-suave">Vehículo</span><span class="font-semibold text-texto">SEAT León · 7730 HPT</span></div>
+      <div class="flex h-[30px] justify-between whitespace-nowrap"><span class="text-texto-suave">Motivo</span><span class="font-semibold text-texto">Revisión de frenos</span></div>
+      <div class="flex h-[30px] justify-between whitespace-nowrap"><span class="text-texto-suave">Reservada</span><span class="font-semibold text-texto">Desde la app de RepairLink</span></div>
+    </aside>
+  </div>
+</div>

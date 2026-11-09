@@ -1,1 +1,88 @@
-<p>clientes works!</p>
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">128 clientes</p>
+      <h1 class="text-[30px] font-bold text-marino">Clientes</h1>
+    </div>
+    <button type="button" class="btn-primario">+ Nuevo cliente</button>
+  </header>
+
+  <div class="flex items-center gap-4">
+    <label class="flex h-[46px] min-w-0 flex-1 items-center gap-2.5 rounded-xl border border-[#dce3e6] bg-white px-[15px]">
+      <img src="icons/buscar.svg" alt="" class="size-[18px]" />
+      <input type="search" class="w-full text-[15px] outline-none placeholder:text-[#8a969c]" placeholder="Buscar por nombre, teléfono o matrícula" />
+    </label>
+    <div class="flex items-center gap-2">
+      <button type="button" class="chip-activo">Todos</button>
+      <button type="button" class="chip-inactivo">Con coche en taller</button>
+      <button type="button" class="chip-inactivo">Nuevos</button>
+    </div>
+  </div>
+
+  <section class="tarjeta flex flex-col">
+    <div class="flex h-10 items-center gap-4 border-b border-separador px-6 text-xs font-bold text-texto-suave">
+      <span class="w-[330px] shrink-0">CLIENTE</span>
+      <span class="w-[150px] shrink-0">TELÉFONO</span>
+      <span class="w-[190px] shrink-0">COCHES</span>
+      <span class="w-[130px] shrink-0">ÚLTIMA VISITA</span>
+      <span class="w-[150px] shrink-0">ESTADO</span>
+    </div>
+
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">LG</span><span class="flex flex-col gap-px"><span class="font-semibold">Laura Gómez</span><span class="text-xs text-texto-suave">laura.gomez&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">600 123 456</span>
+      <span class="w-[190px] shrink-0">Renault Clio 3, Citroën C3</span>
+      <span class="w-[130px] shrink-0">Hoy</span>
+      <span class="w-[150px] shrink-0"><span class="badge-naranja">Cita hoy</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">ML</span><span class="flex flex-col gap-px"><span class="font-semibold">Marta López</span><span class="text-xs text-texto-suave">marta.lopez&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">611 234 567</span>
+      <span class="w-[190px] shrink-0">SEAT León</span>
+      <span class="w-[130px] shrink-0">Hoy</span>
+      <span class="w-[150px] shrink-0"><span class="badge-naranja">Cita hoy</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">CM</span><span class="flex flex-col gap-px"><span class="font-semibold">Carlos Méndez</span><span class="text-xs text-texto-suave">carlos.mendez&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">622 345 678</span>
+      <span class="w-[190px] shrink-0">Peugeot 208</span>
+      <span class="w-[130px] shrink-0">Hoy</span>
+      <span class="w-[150px] shrink-0"><span class="badge-verde">Listo para recoger</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">JO</span><span class="flex flex-col gap-px"><span class="font-semibold">Javier Ortega</span><span class="text-xs text-texto-suave">javier.ortega&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">633 456 789</span>
+      <span class="w-[190px] shrink-0">Ford Focus</span>
+      <span class="w-[130px] shrink-0">Hoy</span>
+      <span class="w-[150px] shrink-0"><span class="badge-naranja">Cita hoy</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">PR</span><span class="flex flex-col gap-px"><span class="font-semibold">Pilar Ramos</span><span class="text-xs text-texto-suave">pilar.ramos&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">644 567 890</span>
+      <span class="w-[190px] shrink-0">Toyota Corolla</span>
+      <span class="w-[130px] shrink-0">Vie 2 oct</span>
+      <span class="w-[150px] shrink-0"><span class="badge-verde">Listo para recoger</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">AM</span><span class="flex flex-col gap-px"><span class="font-semibold">Andrés Molina</span><span class="text-xs text-texto-suave">andres.molina&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">655 678 901</span>
+      <span class="w-[190px] shrink-0">Kia Ceed</span>
+      <span class="w-[130px] shrink-0">Mié 7 oct</span>
+      <span class="w-[150px] shrink-0"><span class="badge-azul">Sin cita activa</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[63px] cursor-pointer items-center gap-4 px-6 text-sm text-texto">
+      <span class="flex w-[330px] shrink-0 items-center gap-3"><span class="avatar size-[38px] text-[13px]">SN</span><span class="flex flex-col gap-px"><span class="font-semibold">Sofía Navarro</span><span class="text-xs text-texto-suave">sofia.navarro&#64;correo.com</span></span></span>
+      <span class="w-[150px] shrink-0">666 789 012</span>
+      <span class="w-[190px] shrink-0">Seat Ibiza</span>
+      <span class="w-[130px] shrink-0">Mié 7 oct</span>
+      <span class="w-[150px] shrink-0"><span class="badge-azul">Sin cita activa</span></span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+  </section>
+</div>

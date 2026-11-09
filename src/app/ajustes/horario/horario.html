@@ -1,1 +1,70 @@
-<p>horario works!</p>
+<div class="flex flex-col gap-6">
+  <p class="text-sm text-texto-suave">Haz clic en cada hora para marcar cuándo está abierto el taller.</p>
+
+  <div class="flex items-start gap-6">
+    <section class="tarjeta min-w-0 flex-1 p-[21px]">
+      <div class="grid grid-cols-[60px_repeat(7,minmax(0,1fr))] items-center gap-x-1 gap-y-1 text-[13px]">
+        <span></span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Lunes</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Martes</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Miércoles</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Jueves</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Viernes</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Sábado</span>
+        <span class="pb-2 text-center font-semibold text-[#33444d]">Domingo</span>
+
+        <span class="text-xs text-texto-suave">08:00</span>
+        <span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">09:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">10:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">11:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">12:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">13:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">14:00</span>
+        <span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">15:00</span>
+        <span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">16:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">17:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">18:00</span>
+        <span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-abierta"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+
+        <span class="text-xs text-texto-suave">19:00</span>
+        <span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span><span class="hora-cerrada"></span>
+      </div>
+
+      <div class="flex items-center gap-[18px] pt-2.5 pl-16 text-[13px] text-texto-suave">
+        <span class="flex items-center gap-1.5"><span class="size-3 rounded-[3px] bg-petroleo"></span>Abierto</span>
+        <span class="flex items-center gap-1.5"><span class="size-3 rounded-[3px] bg-separador"></span>Cerrado</span>
+      </div>
+    </section>
+
+    <aside class="flex w-[340px] shrink-0 flex-col gap-4">
+      <div class="tarjeta flex flex-col gap-3 p-[21px] text-[13px]">
+        <h2 class="text-base font-bold text-marino">Resumen</h2>
+        <div class="flex justify-between whitespace-nowrap"><span class="text-texto-suave">Lunes – Viernes</span><span class="font-semibold text-texto">09:00–14:00 · 16:00–19:00</span></div>
+        <div class="flex justify-between whitespace-nowrap"><span class="text-texto-suave">Sábado</span><span class="font-semibold text-texto">09:00–14:00</span></div>
+        <div class="flex justify-between whitespace-nowrap"><span class="text-texto-suave">Domingo</span><span class="font-semibold text-texto">Cerrado</span></div>
+      </div>
+      <button type="button" class="btn-secundario w-full">Copiar lunes a L–V</button>
+      <button type="button" class="btn-secundario w-full">Vaciar semana</button>
+    </aside>
+  </div>
+</div>

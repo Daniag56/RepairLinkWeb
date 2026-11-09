@@ -1,0 +1,42 @@
+<div class="flex min-h-screen">
+  <app-panel-marca class="w-[52.8%] shrink-0">
+    <h1 class="text-[32px] font-bold text-white">Da de alta tu taller en RepairLink</h1>
+    <p class="text-lg leading-7 text-menu">Estos datos aparecen en tu ficha de la app de clientes. Podrás cambiarlos más tarde.</p>
+  </app-panel-marca>
+
+  <section class="flex flex-1 items-center justify-center px-8 py-8">
+    <form class="tarjeta flex w-[480px] flex-col gap-5 p-10">
+      <div class="flex items-center gap-2.5 text-[13px] font-semibold whitespace-nowrap">
+        <span class="flex size-[26px] items-center justify-center rounded-full bg-verde-medio"><img src="icons/check-blanco.svg" alt="" class="size-3.5" /></span><span class="text-marino">Datos de acceso</span>
+        <span class="h-0.5 w-7 bg-verde-medio"></span>
+        <span class="flex size-[26px] items-center justify-center rounded-full bg-marino text-white">2</span><span class="text-marino">Datos del taller</span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <h2 class="text-[28px] font-bold text-marino">Datos del taller</h2>
+        <p class="text-[15px] text-texto-suave">Paso 2 de 2 · Así te verán los clientes</p>
+      </div>
+      <label><span class="etiqueta">Nombre del taller</span><input type="text" class="campo" placeholder="Ej.: Talleres Hermanos Ruiz" /></label>
+      <div class="flex gap-3.5">
+        <label class="min-w-0 flex-1"><span class="etiqueta">CIF</span><input type="text" class="campo" placeholder="B12345678" /></label>
+        <label class="min-w-0 flex-1"><span class="etiqueta">Teléfono del taller</span><input type="tel" class="campo" placeholder="+34 910 000 000" /></label>
+      </div>
+      <label><span class="etiqueta">Dirección</span><input type="text" class="campo" placeholder="Calle, número, código postal y ciudad" /></label>
+      <div>
+        <span class="etiqueta">Servicios que ofreces</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip-activo">Mecánica</span>
+          <span class="chip-activo">Frenos</span>
+          <span class="chip-inactivo">Neumáticos</span>
+          <span class="chip-activo">Aceite</span>
+          <span class="chip-inactivo">ITV</span>
+          <span class="chip-inactivo">Eléctrico</span>
+          <span class="chip-inactivo">Chapa y pintura</span>
+        </div>
+      </div>
+      <div class="flex gap-3">
+        <button type="button" class="btn-secundario min-w-0 flex-1">Atrás</button>
+        <button type="button" class="btn-primario min-w-0 flex-1">Crear taller</button>
+      </div>
+    </form>
+  </section>
+</div>

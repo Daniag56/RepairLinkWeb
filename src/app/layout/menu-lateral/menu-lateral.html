@@ -1,1 +1,58 @@
-<p>menu-lateral works!</p>
+<aside class="flex h-full flex-col gap-8 overflow-y-auto bg-marino px-5 py-7">
+  <div class="flex items-center gap-2.5">
+    <div class="flex h-9 items-center justify-center overflow-clip rounded-[10.08px] bg-naranja">
+      <span class="relative block size-5">
+        <img src="icons/logo-llave.svg" alt="" class="absolute top-[0.83px] left-[1.66px] max-w-none" />
+      </span>
+    </div>
+    <p class="text-xl font-bold whitespace-nowrap text-white">Repair<span class="text-naranja-claro">Link</span></p>
+  </div>
+
+  <nav class="flex w-full flex-col gap-1">
+    <a routerLink="/panel" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-panel.svg" alt="" class="absolute top-[1.67px] left-[1.67px] max-w-none" />
+      </span>
+      Panel
+    </a>
+    <a routerLink="/agenda" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-agenda.svg" alt="" class="absolute top-[1.67px] left-[1.67px] max-w-none" />
+      </span>
+      Agenda
+    </a>
+    <a routerLink="/coches" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-coches.svg" alt="" class="absolute top-[5px] left-[0.83px] max-w-none" />
+      </span>
+      Coches
+    </a>
+    <a routerLink="/clientes" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-clientes.svg" alt="" class="absolute top-[2.92px] left-[1.25px] max-w-none" />
+      </span>
+      Clientes
+    </a>
+    <a routerLink="/mensajes" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-mensajes.svg" alt="" class="absolute top-[3.7px] left-[2.5px] max-w-none" />
+      </span>
+      Mensajes
+      <span class="ml-auto flex size-[22px] shrink-0 items-center justify-center rounded-[11px] bg-naranja text-xs font-bold text-contador">3</span>
+    </a>
+    <a routerLink="/ajustes" routerLinkActive="activo" class="enlace-menu">
+      <span class="relative block size-5 shrink-0">
+        <img src="icons/menu-ajustes.svg" alt="" class="absolute top-[2.5px] left-[2.5px] max-w-none" />
+      </span>
+      Ajustes
+    </a>
+  </nav>
+
+  <a routerLink="/perfil" routerLinkActive="bg-petroleo" class="-mx-2 -my-1.5 mt-auto flex items-center gap-2.5 rounded-[10px] px-2 py-1.5">
+    <span class="flex size-10 shrink-0 items-center justify-center rounded-full bg-petroleo text-sm font-bold text-white">HR</span>
+    <span class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
+      <span class="text-sm font-semibold text-white">Talleres Hermanos Ruiz</span>
+      <span class="text-xs text-menu-suave">Recepción</span>
+    </span>
+  </a>
+</aside>

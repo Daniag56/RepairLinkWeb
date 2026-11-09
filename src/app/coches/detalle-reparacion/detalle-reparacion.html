@@ -1,0 +1,53 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Coches en el taller · Laura Gómez</p>
+      <h1 class="text-[30px] font-bold text-marino">Renault Clio 3 · 4821 KLM</h1>
+    </div>
+    <div class="flex items-center gap-2.5">
+      <button type="button" class="btn-secundario">Abrir chat</button>
+      <button type="button" class="btn-primario">Crear presupuesto</button>
+    </div>
+  </header>
+
+  <div class="flex items-start gap-6">
+    <section class="tarjeta flex min-w-0 flex-1 flex-col gap-3 p-6">
+      <div class="flex items-center justify-between"><h2 class="text-lg font-bold text-marino">Estado de la reparación</h2><span class="badge-naranja">En reparación</span></div>
+
+      <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-verde-medio"><img src="icons/check-blanco.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-verde-medio"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Coche recibido</p><p class="text-[13px] text-texto-suave">Lun 5 oct · 09:12 · 84 500 km</p></div></div>
+      <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-verde-medio"><img src="icons/check-blanco.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-verde-medio"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Revisión completada</p><p class="text-[13px] text-texto-suave">Discos y pastillas delanteros al límite · 12:40</p></div></div>
+      <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-verde-medio"><img src="icons/check-blanco.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-verde-medio"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Presupuesto aceptado</p><p class="text-[13px] text-texto-suave">186,40 € · aceptado desde la app · 13:05</p></div></div>
+      <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-verde-medio"><img src="icons/check-blanco.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-borde"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Piezas pedidas</p><p class="text-[13px] text-texto-suave">Pastillas y discos delanteros · Mar 6 oct</p></div></div>
+      <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-naranja"><img src="icons/logo-llave.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-borde"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-bold text-naranja-oscuro">En reparación</p><p class="text-[13px] text-texto-suave">Cambio de pastillas y discos · Fin previsto hoy, 18:00</p></div></div>
+      <div class="flex h-[49px] gap-3.5"><span class="size-6 shrink-0 rounded-md border-2 border-borde"></span><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto-suave">Listo para recoger</p><p class="text-[13px] text-texto-suave">Se avisará al cliente automáticamente</p></div></div>
+
+      <div class="flex items-end justify-between gap-4 rounded-xl bg-fondo p-3.5">
+        <div class="min-w-0 flex-1">
+          <span class="etiqueta">Actualizar estado</span>
+          <span class="campo flex items-center justify-between">Listo para recoger<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span>
+        </div>
+        <button type="button" class="btn-naranja shrink-0">Guardar y avisar</button>
+      </div>
+    </section>
+
+    <aside class="flex w-[380px] shrink-0 flex-col gap-4">
+      <div class="tarjeta flex flex-col gap-3.5 p-6 text-sm">
+        <h2 class="text-lg font-bold text-marino">Vehículo y cliente</h2>
+        <div class="flex justify-between"><span class="text-texto-suave">Cliente</span><a class="cursor-pointer font-semibold text-petroleo">Laura Gómez</a></div>
+        <div class="flex justify-between"><span class="text-texto-suave">Teléfono</span><span class="font-semibold text-texto">600 123 456</span></div>
+        <div class="flex justify-between"><span class="text-texto-suave">Km a la entrada</span><span class="font-semibold text-texto">84 500</span></div>
+        <div class="flex justify-between"><span class="text-texto-suave">Entrada</span><span class="font-semibold text-texto">Lun 5 oct · 09:12</span></div>
+        <div class="flex justify-between"><span class="text-texto-suave">Entrega prevista</span><span class="font-semibold text-texto">Hoy · 18:00</span></div>
+      </div>
+      <div class="tarjeta flex flex-col gap-1.5 p-6">
+        <div class="flex items-center justify-between"><h2 class="text-lg font-bold text-marino">Presupuesto</h2><span class="badge-verde">✓ Aceptado</span></div>
+        <p class="text-sm text-texto-suave">Pastillas y discos delanteros</p>
+        <p class="text-2xl font-bold text-marino">186,40 €</p>
+      </div>
+      <div class="tarjeta flex flex-col gap-1.5 p-5">
+        <h2 class="text-[15px] font-bold text-marino">Notas internas</h2>
+        <p class="text-sm text-texto-suave">Revisar también el líquido de frenos al terminar.</p>
+      </div>
+    </aside>
+  </div>
+</div>

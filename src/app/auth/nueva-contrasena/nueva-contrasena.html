@@ -1,0 +1,24 @@
+<div class="flex min-h-screen">
+  <app-panel-marca class="w-[52.8%] shrink-0">
+    <h1 class="text-[32px] font-bold text-white">Recupera el acceso a tu panel</h1>
+    <p class="text-lg leading-7 text-menu">Elige una contraseña segura que no uses en otros sitios.</p>
+  </app-panel-marca>
+
+  <section class="flex flex-1 items-center justify-center px-8 py-8">
+    <form class="tarjeta flex w-[480px] flex-col gap-5 p-10">
+      <span class="flex size-[72px] items-center justify-center rounded-full bg-azul-fondo"><img src="icons/candado-petroleo.svg" alt="" class="size-[34px]" /></span>
+      <div class="flex flex-col gap-1.5">
+        <h2 class="text-[26px] font-bold text-marino">Crea una nueva contraseña</h2>
+        <p class="text-[15px] text-texto-suave">Para la cuenta taller&#64;correo.com</p>
+      </div>
+      <label><span class="etiqueta">Nueva contraseña</span><span class="relative block"><input type="password" class="campo pr-10" placeholder="••••••••••" /><img src="icons/ojo.svg" alt="" class="absolute top-4 right-3.5 size-[18px]" /></span></label>
+      <label><span class="etiqueta">Repetir contraseña</span><span class="relative block"><input type="password" class="campo pr-10" placeholder="••••••••••" /><img src="icons/ojo.svg" alt="" class="absolute top-4 right-3.5 size-[18px]" /></span></label>
+      <ul class="flex flex-col gap-2 text-[13px]">
+        <li class="flex items-center gap-2 text-verde"><img src="icons/check-verde.svg" alt="" class="size-3" />Mínimo 8 caracteres</li>
+        <li class="flex items-center gap-2 text-verde"><img src="icons/check-verde.svg" alt="" class="size-3" />Al menos una mayúscula</li>
+        <li class="flex items-center gap-2 pl-5 text-texto-suave">Al menos un número</li>
+      </ul>
+      <button type="button" class="btn-primario">Guardar contraseña</button>
+    </form>
+  </section>
+</div>

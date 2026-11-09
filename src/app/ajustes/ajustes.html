@@ -1,1 +1,18 @@
-<p>ajustes works!</p>
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Talleres Hermanos Ruiz</p>
+      <h1 class="text-[30px] font-bold text-marino">Configuración</h1>
+    </div>
+    <button type="button" class="btn-primario">Guardar cambios</button>
+  </header>
+
+  <nav class="flex w-fit items-start gap-1 rounded-xl bg-[#e4eaec] p-1">
+    <a routerLink="horario" routerLinkActive="activa" class="pestana">Horario</a>
+    <a routerLink="festivos" routerLinkActive="activa" class="pestana">Festivos</a>
+    <a routerLink="vacaciones" routerLinkActive="activa" class="pestana">Vacaciones</a>
+    <a routerLink="promociones" routerLinkActive="activa" class="pestana">Promociones</a>
+  </nav>
+
+  <router-outlet />
+</div>
