@@ -1,0 +1,53 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">3 pendientes de confirmar</p>
+      <h1 class="text-[30px] font-bold text-marino">Solicitudes de cita</h1>
+    </div>
+    <button type="button" class="btn-secundario">Ver agenda</button>
+  </header>
+
+  <div class="flex items-center gap-2">
+    <button type="button" class="chip-activo">Pendientes · 3</button>
+    <button type="button" class="chip-inactivo">Aceptadas</button>
+    <button type="button" class="chip-inactivo">Rechazadas</button>
+  </div>
+
+  <section class="flex flex-col gap-3.5">
+    <article class="tarjeta flex h-[114px] items-center gap-5 px-6">
+      <div class="flex h-[66px] w-[60px] shrink-0 flex-col items-center justify-center rounded-xl bg-marino"><span class="text-xs font-bold text-menu">JUE</span><span class="text-2xl font-bold text-white">8</span></div>
+      <div class="flex min-w-0 flex-1 flex-col gap-1">
+        <p class="text-base font-bold text-texto">Laura Gómez</p>
+        <p class="text-sm text-texto-suave">10:30 · Revisión · Renault Clio 3 · 4821 KLM</p>
+        <p class="text-sm text-[#33444d] italic">«Chirrían los frenos al parar»</p>
+      </div>
+      <button type="button" class="btn-secundario shrink-0">Rechazar</button>
+      <button type="button" class="btn-primario shrink-0">Aceptar cita</button>
+    </article>
+
+    <article class="tarjeta flex h-[114px] items-center gap-5 px-6">
+      <div class="flex h-[66px] w-[60px] shrink-0 flex-col items-center justify-center rounded-xl bg-marino"><span class="text-xs font-bold text-menu">VIE</span><span class="text-2xl font-bold text-white">9</span></div>
+      <div class="flex min-w-0 flex-1 flex-col gap-1">
+        <p class="flex items-center gap-2.5 text-base font-bold text-texto">Andrés Molina<span class="badge-naranja">Cliente nuevo</span></p>
+        <p class="text-sm text-texto-suave">09:00 · Cambio de aceite · Kia Ceed · 5521 KTR</p>
+      </div>
+      <button type="button" class="btn-secundario shrink-0">Rechazar</button>
+      <button type="button" class="btn-primario shrink-0">Aceptar cita</button>
+    </article>
+
+    <article class="tarjeta flex h-[114px] items-center gap-5 px-6">
+      <div class="flex h-[66px] w-[60px] shrink-0 flex-col items-center justify-center rounded-xl bg-marino"><span class="text-xs font-bold text-menu">LUN</span><span class="text-2xl font-bold text-white">12</span></div>
+      <div class="flex min-w-0 flex-1 flex-col gap-1">
+        <p class="flex items-center gap-2.5 text-base font-bold text-texto">Sofía Navarro<span class="badge-naranja">Cliente nuevo</span></p>
+        <p class="text-sm text-texto-suave">16:30 · Neumáticos · Seat Ibiza · 8842 JHM</p>
+        <p class="text-sm text-[#33444d] italic">«Pinchazo en la rueda trasera»</p>
+      </div>
+      <button type="button" class="btn-secundario shrink-0">Rechazar</button>
+      <button type="button" class="btn-primario shrink-0">Aceptar cita</button>
+    </article>
+  </section>
+
+  <p class="flex h-[42px] items-center gap-2.5 rounded-xl bg-azul-fondo px-4 text-sm text-azul">
+    <img src="icons/info.svg" alt="" class="size-[18px]" />Al aceptar o rechazar, el cliente recibe un aviso en la app con la respuesta.
+  </p>
+</div>

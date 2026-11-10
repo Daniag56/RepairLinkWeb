@@ -1,0 +1,61 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Así te ven los clientes en la app</p>
+      <h1 class="text-[30px] font-bold text-marino">Perfil del taller</h1>
+    </div>
+    <button type="button" class="btn-primario">Guardar cambios</button>
+  </header>
+
+  <div class="flex items-start gap-6">
+    <form class="tarjeta flex min-w-0 flex-1 flex-col gap-4 p-6">
+      <div>
+        <span class="etiqueta">Fotos</span>
+        <div class="flex gap-2.5 text-[13px] text-texto-suave">
+          <div class="flex h-24 min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl bg-marino font-semibold text-white"><img src="icons/logo-llave.svg" alt="" class="size-7 brightness-0 invert" />Portada</div>
+          <div class="flex h-24 min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl bg-fondo"><img src="icons/camara.svg" alt="" class="size-[22px]" />Añadir foto</div>
+          <div class="flex h-24 min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl bg-fondo"><img src="icons/camara.svg" alt="" class="size-[22px]" />Añadir foto</div>
+          <div class="flex h-24 min-w-0 flex-1 flex-col items-center justify-center gap-1 rounded-xl bg-fondo"><img src="icons/camara.svg" alt="" class="size-[22px]" />Añadir foto</div>
+        </div>
+      </div>
+      <label><span class="etiqueta">Nombre del taller</span><input type="text" class="campo" value="Talleres Hermanos Ruiz" /></label>
+      <div class="flex gap-4">
+        <label class="min-w-0 flex-1"><span class="etiqueta">CIF</span><input type="text" class="campo" value="B12345678" /></label>
+        <label class="min-w-0 flex-1"><span class="etiqueta">Teléfono</span><input type="tel" class="campo" value="910 000 000" /></label>
+      </div>
+      <label><span class="etiqueta">Dirección</span><input type="text" class="campo" value="C/ Ejemplo 12, 28001 Madrid" /></label>
+      <label><span class="etiqueta">Descripción</span><textarea class="campo h-[70px] resize-none py-3">Taller multimarca con más de 20 años de experiencia en mecánica, frenos e ITV.</textarea></label>
+      <div>
+        <span class="etiqueta">Servicios</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="chip-activo">Mecánica</span>
+          <span class="chip-activo">Frenos</span>
+          <span class="chip-activo">ITV</span>
+          <span class="chip-activo">Aceite</span>
+          <span class="chip-inactivo">Neumáticos</span>
+          <span class="chip-inactivo">Eléctrico</span>
+          <span class="chip-inactivo">Chapa y pintura</span>
+        </div>
+      </div>
+    </form>
+
+    <aside class="flex w-[340px] shrink-0 flex-col gap-3">
+      <h2 class="text-sm font-semibold text-[#33444d]">Vista previa en la app</h2>
+      <div class="tarjeta flex flex-col">
+        <div class="flex h-20 items-center justify-end bg-marino px-4"><span class="flex size-10 items-center justify-center rounded-full bg-petroleo"><img src="icons/logo-llave.svg" alt="" class="size-[18px] brightness-0 invert" /></span></div>
+        <div class="flex flex-col gap-1.5 p-4">
+          <p class="text-base font-bold text-marino">Talleres Hermanos Ruiz</p>
+          <p class="text-[13px] font-medium text-verde">Abierto · cierra a las 19:00</p>
+          <p class="flex items-center gap-1 text-[13px] text-texto-suave"><img src="icons/estrella.svg" alt="" class="size-[13px]" />4,9 (312) · 0,8 km</p>
+          <div class="flex gap-1.5 text-xs font-semibold text-azul">
+            <span class="rounded-full bg-azul-fondo px-2.5 py-1">Mecánica</span>
+            <span class="rounded-full bg-azul-fondo px-2.5 py-1">Frenos</span>
+            <span class="rounded-full bg-azul-fondo px-2.5 py-1">ITV</span>
+            <span class="rounded-full bg-azul-fondo px-2.5 py-1">Aceite</span>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="flex h-12 w-full cursor-pointer items-center gap-2 rounded-xl bg-white px-4 text-[15px] font-semibold text-naranja-oscuro"><img src="icons/salir.svg" alt="" class="size-[18px]" />Cerrar sesión</button>
+    </aside>
+  </div>
+</div>

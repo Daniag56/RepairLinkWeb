@@ -1,3 +1,183 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --color-marino: #17394a;
+  --color-petroleo: #2c6475;
+  --color-naranja: #e8792b;
+  --color-naranja-claro: #f29a5a;
+  --color-fondo: #f3f5f4;
+  --color-borde: #e2e7e9;
+  --color-separador: #eef1f2;
+  --color-texto: #1c2b33;
+  --color-texto-suave: #5b6870;
+  --color-menu: #c9dce2;
+  --color-menu-suave: #a9c3cb;
+  --color-contador: #14303d;
+
+  --color-verde-fondo: #e3f2ea;
+  --color-verde: #22704a;
+  --color-naranja-fondo: #fce7da;
+  --color-naranja-oscuro: #a84a12;
+  --color-naranja-texto: #8a3d0f;
+  --color-azul-fondo: #e4edf0;
+  --color-azul: #2c4d5b;
+  --color-verde-medio: #2e8a5a;
+  --color-verde-oscuro: #1c5a3b;
+}
+
+@layer base {
+  body {
+    @apply bg-fondo text-texto;
+    line-height: normal;
+  }
+}
+
+@layer components {
+  .tarjeta {
+    @apply overflow-clip rounded-2xl border border-borde bg-white;
+  }
+
+  .btn-primario {
+    @apply cursor-pointer rounded-xl bg-marino px-5 py-[15px] text-base font-bold whitespace-nowrap text-white;
+  }
+
+  .badge-verde,
+  .badge-naranja,
+  .badge-azul {
+    @apply rounded-full px-2.5 py-[5px] text-xs font-semibold whitespace-nowrap;
+  }
+
+  .badge-verde {
+    @apply bg-verde-fondo text-verde;
+  }
+
+  .badge-naranja {
+    @apply bg-naranja-fondo text-naranja-oscuro;
+  }
+
+  .badge-azul {
+    @apply bg-azul-fondo text-azul;
+  }
+
+  .btn-naranja {
+    @apply cursor-pointer rounded-xl bg-naranja px-5 py-[15px] text-base font-bold whitespace-nowrap text-contador;
+  }
+
+  .btn-secundario {
+    @apply cursor-pointer rounded-xl border border-[#dce3e6] bg-white px-5 py-[15px] text-base font-bold whitespace-nowrap text-marino;
+  }
+
+  .etiqueta {
+    @apply mb-2 block text-sm font-semibold text-[#33444d];
+  }
+
+  .campo {
+    @apply h-[50px] w-full rounded-xl border border-[#dce3e6] bg-white px-[15px] text-[15px] text-texto outline-none placeholder:text-[#8a969c];
+  }
+
+  .chip-activo,
+  .chip-inactivo {
+    @apply cursor-pointer rounded-full px-4 py-[11px] text-sm font-semibold whitespace-nowrap;
+  }
+
+  .chip-activo {
+    @apply bg-marino text-white;
+  }
+
+  .chip-inactivo {
+    @apply border border-[#dce3e6] bg-white text-[#33444d];
+  }
+
+  .pestana {
+    @apply cursor-pointer rounded-[9px] px-[22px] py-2.5 text-sm font-semibold whitespace-nowrap text-[#4f5e66];
+  }
+
+  .pestana.activa {
+    @apply bg-white text-marino;
+  }
+
+  .avatar {
+    @apply flex shrink-0 items-center justify-center rounded-full bg-azul-fondo font-bold text-petroleo;
+  }
+
+  .interruptor-on,
+  .interruptor-off {
+    @apply relative block h-8 w-[52px] shrink-0 rounded-full;
+  }
+
+  .interruptor-on {
+    @apply bg-verde-medio;
+  }
+
+  .interruptor-off {
+    @apply bg-[#c5ced2];
+  }
+
+  .interruptor-on::after,
+  .interruptor-off::after {
+    @apply absolute top-[3px] size-[26px] rounded-full bg-white content-[''];
+  }
+
+  .interruptor-on::after {
+    left: 23px;
+  }
+
+  .interruptor-off::after {
+    left: 3px;
+  }
+
+  .hora-abierta,
+  .hora-cerrada {
+    @apply h-[30px] rounded-md;
+  }
+
+  .hora-abierta {
+    @apply bg-petroleo;
+  }
+
+  .hora-cerrada {
+    @apply bg-separador;
+  }
+
+  .enlace-menu {
+    @apply flex w-full items-center gap-3 rounded-[10px] px-3.5 py-3 text-[15px] font-medium whitespace-nowrap text-menu;
+  }
+
+  .enlace-menu.activo {
+    @apply bg-petroleo font-semibold text-white;
+  }
+
+  .enlace-menu.activo img {
+    filter: brightness(0) invert(1);
+  }
+
+  .celda-libre,
+  .celda-cerrada,
+  .cita-confirmada,
+  .cita-pendiente,
+  .cita-en-taller {
+    @apply flex h-[62px] min-w-0 flex-1 flex-col items-start gap-0.5 overflow-clip rounded-lg px-2 py-1.5 whitespace-nowrap;
+  }
+
+  .celda-libre {
+    @apply border border-separador bg-white;
+  }
+
+  .celda-cerrada {
+    @apply border border-separador bg-separador text-[11px] text-[#8a969c];
+  }
+
+  .cita-confirmada {
+    @apply border-l-3 border-petroleo bg-azul-fondo text-marino;
+  }
+
+  .cita-pendiente {
+    @apply border-l-3 border-naranja bg-naranja-fondo text-naranja-texto;
+  }
+
+  .cita-en-taller {
+    @apply border-l-3 border-verde-medio bg-verde-fondo text-verde-oscuro;
+  }
+}

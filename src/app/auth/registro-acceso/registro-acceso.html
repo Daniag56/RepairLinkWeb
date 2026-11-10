@@ -1,0 +1,34 @@
+<div class="flex min-h-screen">
+  <app-panel-marca class="w-[52.8%] shrink-0">
+    <h1 class="text-[32px] font-bold text-white">Da de alta tu taller en RepairLink</h1>
+    <p class="text-lg leading-7 text-menu">Recibe citas de clientes cercanos y gestiona cada reparación desde el navegador.</p>
+  </app-panel-marca>
+
+  <section class="flex flex-1 items-center justify-center px-8 py-8">
+    <form class="tarjeta flex w-[480px] flex-col gap-5 p-10">
+      <div class="flex items-center gap-2.5 text-[13px] font-semibold whitespace-nowrap">
+        <span class="flex size-[26px] items-center justify-center rounded-full bg-marino text-white">1</span><span class="text-marino">Datos de acceso</span>
+        <span class="h-0.5 w-7 bg-borde"></span>
+        <span class="flex size-[26px] items-center justify-center rounded-full bg-azul-fondo text-azul">2</span><span class="text-texto-suave">Datos del taller</span>
+      </div>
+      <div class="flex flex-col gap-1.5">
+        <h2 class="text-[28px] font-bold text-marino">Crea tu cuenta</h2>
+        <p class="text-[15px] text-texto-suave">Paso 1 de 2 · Datos de acceso</p>
+      </div>
+      <label><span class="etiqueta">Nombre y apellidos</span><input type="text" class="campo" placeholder="Ej.: Antonio Ruiz" /></label>
+      <div class="flex gap-3.5">
+        <label class="min-w-0 flex-1"><span class="etiqueta">Correo electrónico</span><input type="email" class="campo" placeholder="taller@correo.com" /></label>
+        <label class="min-w-0 flex-1"><span class="etiqueta">Teléfono</span><input type="tel" class="campo" placeholder="+34 600 000 000" /></label>
+      </div>
+      <div class="flex gap-3.5">
+        <label class="min-w-0 flex-1"><span class="etiqueta">Contraseña</span><span class="relative block"><input type="password" class="campo pr-10" placeholder="Mínimo 8 caracteres" /><img src="icons/ojo.svg" alt="" class="absolute top-4 right-3.5 size-[18px]" /></span></label>
+        <label class="min-w-0 flex-1"><span class="etiqueta">Repetir contraseña</span><input type="password" class="campo" placeholder="••••••••" /></label>
+      </div>
+      <label class="flex items-start gap-2.5 text-sm text-[#33444d]">
+        <input type="checkbox" checked class="mt-0.5 size-[18px] accent-petroleo" />Acepto las condiciones de uso y la política de privacidad
+      </label>
+      <button type="button" class="btn-primario">Continuar</button>
+      <p class="text-center text-sm text-texto-suave">¿Ya tienes cuenta? <a class="cursor-pointer font-semibold text-marino">Inicia sesión</a></p>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,67 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">9 coches · 2 listos para entregar</p>
+      <h1 class="text-[30px] font-bold text-marino">Coches en el taller</h1>
+    </div>
+    <button type="button" class="btn-primario">+ Aceptar coche</button>
+  </header>
+
+  <div class="flex items-center gap-2">
+    <button type="button" class="chip-activo">Todos · 9</button>
+    <button type="button" class="chip-inactivo">En revisión · 3</button>
+    <button type="button" class="chip-inactivo">Esperando presupuesto · 1</button>
+    <button type="button" class="chip-inactivo">Piezas pedidas · 1</button>
+    <button type="button" class="chip-inactivo">En reparación · 2</button>
+    <button type="button" class="chip-inactivo">Listos · 2</button>
+  </div>
+
+  <section class="tarjeta flex flex-col">
+    <div class="flex h-10 items-center gap-4 border-b border-separador px-6 text-xs font-bold text-texto-suave">
+      <span class="w-[250px] shrink-0">VEHÍCULO</span><span class="w-[160px] shrink-0">CLIENTE</span><span class="w-[250px] shrink-0">TRABAJO</span><span class="w-[170px] shrink-0">ESTADO</span><span class="w-[90px] shrink-0">ENTRADA</span>
+    </div>
+
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Renault Clio 3</span><span class="text-xs text-texto-suave">4821 KLM</span></span></span>
+      <span class="w-[160px] shrink-0">Laura Gómez</span><span class="w-[250px] shrink-0">Cambio de pastillas y discos</span>
+      <span class="w-[170px] shrink-0"><span class="badge-naranja">En reparación</span></span><span class="w-[90px] shrink-0">Lun 5 oct</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">SEAT León</span><span class="text-xs text-texto-suave">7730 HPT</span></span></span>
+      <span class="w-[160px] shrink-0">Marta López</span><span class="w-[250px] shrink-0">Revisión de frenos</span>
+      <span class="w-[170px] shrink-0"><span class="badge-azul">En revisión</span></span><span class="w-[90px] shrink-0">Hoy</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Peugeot 208</span><span class="text-xs text-texto-suave">1596 MXC</span></span></span>
+      <span class="w-[160px] shrink-0">Carlos Méndez</span><span class="w-[250px] shrink-0">Neumáticos</span>
+      <span class="w-[170px] shrink-0"><span class="badge-verde">Listo para recoger</span></span><span class="w-[90px] shrink-0">Hoy</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Ford Focus</span><span class="text-xs text-texto-suave">2245 JTR</span></span></span>
+      <span class="w-[160px] shrink-0">Javier Ortega</span><span class="w-[250px] shrink-0">Cambio de aceite</span>
+      <span class="w-[170px] shrink-0"><span class="badge-azul">En revisión</span></span><span class="w-[90px] shrink-0">Hoy</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Toyota Corolla</span><span class="text-xs text-texto-suave">3310 LBD</span></span></span>
+      <span class="w-[160px] shrink-0">Pilar Ramos</span><span class="w-[250px] shrink-0">Revisión general</span>
+      <span class="w-[170px] shrink-0"><span class="badge-verde">Listo para recoger</span></span><span class="w-[90px] shrink-0">Vie 2 oct</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 border-b border-separador px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Kia Ceed</span><span class="text-xs text-texto-suave">5521 KTR</span></span></span>
+      <span class="w-[160px] shrink-0">Andrés Molina</span><span class="w-[250px] shrink-0">Embrague</span>
+      <span class="w-[170px] shrink-0"><span class="badge-naranja">Piezas pedidas</span></span><span class="w-[90px] shrink-0">Mié 7 oct</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+    <a class="flex h-[65px] cursor-pointer items-center gap-4 px-6 text-sm text-texto">
+      <span class="flex w-[250px] shrink-0 items-center gap-3"><span class="flex size-10 shrink-0 items-center justify-center rounded-[10px] bg-azul-fondo"><img src="icons/coche.svg" alt="" class="size-[18px]" /></span><span class="flex flex-col gap-0.5"><span class="font-semibold">Seat Ibiza</span><span class="text-xs text-texto-suave">8842 JHM</span></span></span>
+      <span class="w-[160px] shrink-0">Sofía Navarro</span><span class="w-[250px] shrink-0">Diagnóstico de motor</span>
+      <span class="w-[170px] shrink-0"><span class="badge-naranja">Esperando presupuesto</span></span><span class="w-[90px] shrink-0">Mié 7 oct</span>
+      <img src="icons/chevron-derecha.svg" alt="" class="ml-auto" />
+    </a>
+  </section>
+</div>

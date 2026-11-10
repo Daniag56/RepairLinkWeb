@@ -1,0 +1,39 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Seat Ibiza · 8842 JHM · Sofía Navarro</p>
+      <h1 class="text-[30px] font-bold text-marino">Nuevo presupuesto</h1>
+    </div>
+    <button type="button" class="btn-secundario">Cancelar</button>
+  </header>
+
+  <div class="flex items-start gap-6">
+    <section class="tarjeta flex min-w-0 flex-1 flex-col">
+      <div class="flex h-10 items-center gap-3 border-b border-separador px-5 text-xs font-bold text-texto-suave">
+        <span class="min-w-0 flex-1">CONCEPTO</span><span class="w-[110px] shrink-0">TIPO</span><span class="w-[50px] shrink-0 text-right">CANT.</span><span class="w-[70px] shrink-0 text-right">PRECIO</span><span class="w-[70px] shrink-0 text-right">IMPORTE</span><span class="w-4 shrink-0"></span>
+      </div>
+      <div class="flex h-[52px] items-center gap-3 border-b border-separador px-5 text-sm text-texto"><span class="min-w-0 flex-1 font-medium">Diagnóstico electrónico</span><span class="w-[110px] shrink-0 text-texto-suave">Mano de obra</span><span class="w-[50px] shrink-0 text-right">1</span><span class="w-[70px] shrink-0 text-right">35,00 €</span><span class="w-[70px] shrink-0 text-right font-semibold">35,00 €</span><img src="icons/papelera.svg" alt="Quitar línea" class="size-4 shrink-0" /></div>
+      <div class="flex h-[52px] items-center gap-3 border-b border-separador px-5 text-sm text-texto"><span class="min-w-0 flex-1 font-medium">Bobina de encendido</span><span class="w-[110px] shrink-0 text-texto-suave">Pieza</span><span class="w-[50px] shrink-0 text-right">1</span><span class="w-[70px] shrink-0 text-right">68,50 €</span><span class="w-[70px] shrink-0 text-right font-semibold">68,50 €</span><img src="icons/papelera.svg" alt="Quitar línea" class="size-4 shrink-0" /></div>
+      <div class="flex h-[52px] items-center gap-3 border-b border-separador px-5 text-sm text-texto"><span class="min-w-0 flex-1 font-medium">Bujías</span><span class="w-[110px] shrink-0 text-texto-suave">Pieza</span><span class="w-[50px] shrink-0 text-right">4</span><span class="w-[70px] shrink-0 text-right">9,90 €</span><span class="w-[70px] shrink-0 text-right font-semibold">39,60 €</span><img src="icons/papelera.svg" alt="Quitar línea" class="size-4 shrink-0" /></div>
+      <div class="flex h-[52px] items-center gap-3 border-b border-separador px-5 text-sm text-texto"><span class="min-w-0 flex-1 font-medium">Sustitución de bobina y bujías</span><span class="w-[110px] shrink-0 text-texto-suave">Mano de obra</span><span class="w-[50px] shrink-0 text-right">1,5 h</span><span class="w-[70px] shrink-0 text-right">45,00 €</span><span class="w-[70px] shrink-0 text-right font-semibold">67,50 €</span><img src="icons/papelera.svg" alt="Quitar línea" class="size-4 shrink-0" /></div>
+      <button type="button" class="h-12 cursor-pointer border-b border-separador px-5 text-left text-sm font-semibold text-petroleo">+ Añadir línea</button>
+      <label class="p-5">
+        <span class="etiqueta">Mensaje para el cliente</span>
+        <textarea class="campo h-[90px] resize-none py-3">La bobina del cilindro 2 está dañada; recomendamos cambiar también las bujías.</textarea>
+      </label>
+    </section>
+
+    <aside class="tarjeta flex w-[340px] shrink-0 flex-col gap-3.5 p-[23px] text-sm">
+      <h2 class="text-lg font-bold text-marino">Resumen</h2>
+      <div class="flex justify-between"><span class="text-texto-suave">Subtotal</span><span class="font-semibold text-texto">210,60 €</span></div>
+      <div class="flex justify-between"><span class="text-texto-suave">IVA (21 %)</span><span class="font-semibold text-texto">44,23 €</span></div>
+      <div class="flex items-center justify-between border-t border-separador pt-3.5"><span class="text-base font-bold text-marino">Total</span><span class="text-[26px] font-bold text-marino">254,83 €</span></div>
+      <div>
+        <span class="etiqueta">Validez</span>
+        <span class="campo flex items-center justify-between">7 días<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span>
+      </div>
+      <button type="button" class="btn-primario w-full">Enviar al cliente</button>
+      <button type="button" class="btn-secundario w-full">Guardar borrador</button>
+    </aside>
+  </div>
+</div>

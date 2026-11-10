@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+import { CitasHoy } from './citas-hoy/citas-hoy';
+import { CochesTaller } from './coches-taller/coches-taller';
 
 @Component({
-  imports: [],
+  imports: [CitasHoy, CochesTaller],
   selector: 'app-panel',
   styleUrl: './panel.css',
   templateUrl: './panel.html',

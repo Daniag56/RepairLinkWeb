@@ -1,1 +1,58 @@
-<p>login works!</p>
+<div class="flex min-h-screen">
+  <section class="flex w-[52.8%] shrink-0 flex-col justify-between bg-marino px-16 py-14">
+    <div class="flex items-center gap-2.5">
+      <div class="flex h-9 items-center justify-center overflow-clip rounded-[10.08px] bg-naranja">
+        <span class="relative block size-5">
+          <img src="icons/logo-llave.svg" alt="" class="absolute top-[0.83px] left-[1.66px] max-w-none" />
+        </span>
+      </div>
+      <p class="text-xl font-bold whitespace-nowrap text-white">Repair<span class="text-naranja-claro">Link</span></p>
+    </div>
+
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center gap-3.5">
+        <span class="flex size-16 items-center justify-center rounded-full bg-petroleo">
+          <img src="icons/logo-llave.svg" alt="" class="size-7 brightness-0 invert" />
+        </span>
+        <span class="h-0.5 w-10 bg-petroleo"></span>
+        <span class="flex size-16 items-center justify-center rounded-full bg-petroleo">
+          <img src="icons/menu-coches.svg" alt="" class="size-7 brightness-0 invert" />
+        </span>
+      </div>
+      <h1 class="text-[40px] leading-12 font-bold text-white">Gestiona tu taller desde el navegador</h1>
+      <p class="text-lg leading-7 text-menu">Citas del día, coches en el taller, chat con tus clientes y la configuración del taller en un mismo panel.</p>
+      <ul class="flex flex-col gap-3.5 text-base text-white">
+        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Citas y coches del día de un vistazo</li>
+        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Chat directo con tus clientes</li>
+        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Horarios, festivos, vacaciones y promociones</li>
+      </ul>
+    </div>
+
+    <p class="text-sm text-menu-suave">¿Eres cliente? Descarga la app de RepairLink para Android.</p>
+  </section>
+
+  <section class="flex flex-1 items-center justify-center px-8">
+    <form class="tarjeta flex w-[420px] flex-col gap-5 p-10">
+      <div class="flex flex-col gap-1.5">
+        <h2 class="text-[28px] font-bold text-marino">Acceso para talleres</h2>
+        <p class="text-[15px] text-texto-suave">Entra en el panel de tu taller</p>
+      </div>
+      <label>
+        <span class="etiqueta">Correo del taller</span>
+        <input type="email" class="campo" placeholder="taller@correo.com" />
+      </label>
+      <label>
+        <span class="etiqueta">Contraseña</span>
+        <input type="password" class="campo" placeholder="••••••••" />
+      </label>
+      <div class="flex items-center justify-between text-sm">
+        <label class="flex items-center gap-2 text-[#33444d]">
+          <input type="checkbox" class="size-[18px] accent-petroleo" />Recordarme
+        </label>
+        <a class="cursor-pointer font-semibold text-marino">¿Has olvidado la contraseña?</a>
+      </div>
+      <button type="button" class="btn-naranja">Entrar</button>
+      <p class="text-center text-sm text-texto-suave">¿Tu taller aún no está en RepairLink? <a class="cursor-pointer font-semibold text-marino">Regístralo</a></p>
+    </form>
+  </section>
+</div>

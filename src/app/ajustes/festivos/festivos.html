@@ -1,1 +1,46 @@
-<p>festivos works!</p>
+<div class="flex flex-col gap-6">
+  <p class="text-sm text-texto-suave">Esos días el taller sale como cerrado en el calendario de reservas de los clientes.</p>
+
+  <div class="flex items-start gap-6">
+    <section class="tarjeta flex min-w-0 flex-1 flex-col">
+      <div class="flex h-[83px] items-center gap-3.5 border-b border-separador px-5">
+        <div class="flex h-[54px] w-[52px] shrink-0 flex-col items-center justify-center rounded-xl bg-azul-fondo"><span class="text-[11px] font-bold text-petroleo">NOV</span><span class="text-xl font-bold text-marino">9</span></div>
+        <div class="flex min-w-0 flex-1 flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">La Almudena</p><p class="text-[13px] text-texto-suave">Festivo local · Madrid</p></div>
+        <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-xl"><img src="icons/cerrar.svg" alt="Quitar festivo" class="size-[18px]" /></button>
+      </div>
+      <div class="flex h-[83px] items-center gap-3.5 border-b border-separador px-5">
+        <div class="flex h-[54px] w-[52px] shrink-0 flex-col items-center justify-center rounded-xl bg-azul-fondo"><span class="text-[11px] font-bold text-petroleo">DIC</span><span class="text-xl font-bold text-marino">8</span></div>
+        <div class="flex min-w-0 flex-1 flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Inmaculada Concepción</p><p class="text-[13px] text-texto-suave">Festivo nacional</p></div>
+        <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-xl"><img src="icons/cerrar.svg" alt="Quitar festivo" class="size-[18px]" /></button>
+      </div>
+      <div class="flex h-[83px] items-center gap-3.5 border-b border-separador px-5">
+        <div class="flex h-[54px] w-[52px] shrink-0 flex-col items-center justify-center rounded-xl bg-azul-fondo"><span class="text-[11px] font-bold text-petroleo">DIC</span><span class="text-xl font-bold text-marino">25</span></div>
+        <div class="flex min-w-0 flex-1 flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Navidad</p><p class="text-[13px] text-texto-suave">Festivo nacional</p></div>
+        <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-xl"><img src="icons/cerrar.svg" alt="Quitar festivo" class="size-[18px]" /></button>
+      </div>
+      <div class="flex h-[83px] items-center gap-3.5 border-b border-separador px-5">
+        <div class="flex h-[54px] w-[52px] shrink-0 flex-col items-center justify-center rounded-xl bg-azul-fondo"><span class="text-[11px] font-bold text-petroleo">ENE</span><span class="text-xl font-bold text-marino">1</span></div>
+        <div class="flex min-w-0 flex-1 flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Año Nuevo</p><p class="text-[13px] text-texto-suave">Festivo nacional · 2027</p></div>
+        <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-xl"><img src="icons/cerrar.svg" alt="Quitar festivo" class="size-[18px]" /></button>
+      </div>
+      <div class="flex h-[82px] items-center gap-3.5 px-5">
+        <div class="flex h-[54px] w-[52px] shrink-0 flex-col items-center justify-center rounded-xl bg-azul-fondo"><span class="text-[11px] font-bold text-petroleo">ENE</span><span class="text-xl font-bold text-marino">6</span></div>
+        <div class="flex min-w-0 flex-1 flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto">Reyes</p><p class="text-[13px] text-texto-suave">Festivo nacional · 2027</p></div>
+        <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-xl"><img src="icons/cerrar.svg" alt="Quitar festivo" class="size-[18px]" /></button>
+      </div>
+    </section>
+
+    <form class="tarjeta flex w-[380px] shrink-0 flex-col gap-4 p-6">
+      <h2 class="text-lg font-bold text-marino">Añadir día de cierre</h2>
+      <label>
+        <span class="etiqueta">Fecha</span>
+        <span class="campo flex items-center gap-2.5 text-[#8a969c]"><img src="icons/calendario.svg" alt="" class="size-[18px]" />dd/mm/aaaa</span>
+      </label>
+      <label>
+        <span class="etiqueta">Motivo (opcional)</span>
+        <input type="text" class="campo" placeholder="Ej.: Fiesta local" />
+      </label>
+      <button type="button" class="btn-primario">Añadir</button>
+    </form>
+  </div>
+</div>

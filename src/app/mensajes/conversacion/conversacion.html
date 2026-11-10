@@ -1,1 +1,60 @@
-<p>conversacion works!</p>
+<div class="tarjeta flex h-full flex-col">
+  <header class="flex h-[77px] shrink-0 items-center gap-3 border-b border-separador px-[22px]">
+    <span class="avatar size-11 text-[15px]">LG</span>
+    <div class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
+      <p class="text-base font-bold text-texto">Laura Gómez</p>
+      <p class="text-[13px] text-texto-suave">Renault Clio 3 · 4821 KLM</p>
+    </div>
+    <span class="text-[13px] whitespace-nowrap text-texto-suave">Estado del coche</span>
+    <button type="button" class="flex h-[34px] cursor-pointer items-center gap-1.5 rounded-full bg-naranja-fondo px-3.5 text-[13px] font-semibold whitespace-nowrap text-naranja-oscuro">
+      En reparación<img src="icons/chevron-abajo.svg" alt="" class="size-3.5" />
+    </button>
+  </header>
+
+  <div class="flex min-h-0 flex-1 flex-col items-start gap-3 overflow-y-auto bg-[#f8fafa] p-[22px]">
+    <span class="rounded-full bg-[#e4eaec] px-2.5 py-1 text-xs text-texto-suave">Hoy</span>
+
+    <div class="w-[440px] max-w-full rounded-2xl bg-marino px-3.5 py-3 text-white">
+      <p class="text-[15px] leading-[18px]">Hemos terminado la revisión. Los discos delanteros están al límite; te recomendamos cambiarlos junto con las pastillas.</p>
+      <p class="mt-1.5 text-xs text-menu-suave">12:42</p>
+    </div>
+
+    <div class="tarjeta flex w-80 flex-col gap-1.5 px-[17px] py-[15px]">
+      <div class="flex items-center justify-between"><span class="text-[13px] text-texto-suave">Presupuesto</span><span class="badge-verde">✓ Aceptado</span></div>
+      <p class="text-[15px] text-texto">Pastillas y discos delanteros</p>
+      <p class="text-2xl font-bold text-marino">186,40 €</p>
+    </div>
+
+    <div class="w-[360px] max-w-full rounded-2xl border border-borde bg-white px-[15px] py-[13px]">
+      <p class="text-[15px] leading-[18px] text-texto">Vale, adelante con el cambio. ¿Para cuándo estaría?</p>
+      <p class="mt-1.5 text-xs text-texto-suave">12:50</p>
+    </div>
+
+    <div class="w-[280px] max-w-full rounded-2xl bg-marino px-3.5 py-3 text-white">
+      <p class="text-[15px] leading-[18px]">Hoy a las 18:00 lo tienes listo.</p>
+      <p class="mt-1.5 text-xs text-menu-suave">12:52</p>
+    </div>
+
+    <div class="w-[200px] max-w-full rounded-2xl border border-borde bg-white px-[15px] py-[13px]">
+      <p class="text-[15px] leading-[18px] text-texto">Perfecto, gracias.</p>
+      <p class="mt-1.5 text-xs text-texto-suave">12:53</p>
+    </div>
+  </div>
+
+  <footer class="flex shrink-0 flex-col gap-2.5 border-t border-separador px-[18px] py-3">
+    <div class="flex items-center gap-2">
+      <button type="button" class="chip-inactivo">+ Presupuesto</button>
+      <button type="button" class="chip-inactivo">Avisar: listo para recoger</button>
+      <button type="button" class="chip-inactivo">Foto</button>
+    </div>
+    <div class="flex items-center gap-2.5">
+      <button type="button" class="flex size-11 shrink-0 cursor-pointer items-center justify-center rounded-full border border-[#dce3e6] bg-white">
+        <img src="icons/mas.svg" alt="Adjuntar" class="size-[18px]" />
+      </button>
+      <input type="text" class="h-[46px] min-w-0 flex-1 rounded-full bg-fondo px-[19px] text-[15px] outline-none placeholder:text-[#8a969c]" placeholder="Escribe un mensaje…" />
+      <button type="button" class="flex size-[46px] shrink-0 cursor-pointer items-center justify-center rounded-full bg-marino">
+        <img src="icons/enviar.svg" alt="Enviar" class="size-[18px]" />
+      </button>
+    </div>
+  </footer>
+</div>

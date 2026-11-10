@@ -1,0 +1,47 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Configuración · Promociones</p>
+      <h1 class="text-[30px] font-bold text-marino">Nueva promoción</h1>
+    </div>
+    <button type="button" class="btn-secundario">Cancelar</button>
+  </header>
+
+  <div class="flex items-start gap-6">
+    <form class="tarjeta flex min-w-0 flex-1 flex-col gap-4 p-6">
+      <label><span class="etiqueta">Título</span><input type="text" class="campo" value="Cambio de aceite" /></label>
+      <div>
+        <span class="etiqueta">Tipo de promoción</span>
+        <div class="flex items-center gap-2">
+          <span class="chip-activo">Porcentaje</span>
+          <span class="chip-inactivo">Importe fijo</span>
+          <span class="chip-inactivo">2x1</span>
+          <span class="chip-inactivo">Servicio gratis</span>
+        </div>
+      </div>
+      <div class="flex gap-4">
+        <label class="min-w-0 flex-1"><span class="etiqueta">Descuento</span><input type="text" class="campo" value="15 %" /></label>
+        <div class="min-w-0 flex-1"><span class="etiqueta">Servicio</span><span class="campo flex items-center justify-between">Aceite<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span></div>
+      </div>
+      <div class="flex gap-4">
+        <div class="min-w-0 flex-1"><span class="etiqueta">Desde</span><span class="campo flex items-center gap-2.5"><img src="icons/calendario.svg" alt="" class="size-[18px]" />1 nov 2026</span></div>
+        <div class="min-w-0 flex-1"><span class="etiqueta">Hasta</span><span class="campo flex items-center gap-2.5"><img src="icons/calendario.svg" alt="" class="size-[18px]" />30 nov 2026</span></div>
+      </div>
+      <label><span class="etiqueta">Condiciones</span><textarea class="campo h-[76px] resize-none py-3">Aceite y filtro. No acumulable con otras ofertas.</textarea></label>
+      <div class="flex h-14 items-center justify-between rounded-xl bg-fondo px-4"><span class="text-[15px] text-texto">Visible para clientes en la app</span><span class="interruptor-on"></span></div>
+      <div class="flex justify-end"><button type="button" class="btn-primario">Publicar promoción</button></div>
+    </form>
+
+    <aside class="flex w-[360px] shrink-0 flex-col gap-3">
+      <h2 class="text-sm font-semibold text-[#33444d]">Vista previa en la app</h2>
+      <div class="tarjeta flex flex-col gap-2 p-[19px]">
+        <div class="flex items-center gap-3">
+          <span class="flex h-[42px] items-center rounded-xl bg-naranja-fondo px-3.5 text-xl font-bold text-naranja-oscuro">-15%</span>
+          <div class="flex min-w-0 flex-col gap-0.5"><p class="text-[15px] font-bold text-marino">Cambio de aceite</p><p class="text-[13px] text-texto-suave">Talleres Hermanos Ruiz</p></div>
+        </div>
+        <p class="text-[13px] font-semibold text-naranja-oscuro">Del 1 al 30 de noviembre</p>
+        <p class="text-[13px] text-texto-suave">Aceite y filtro. No acumulable con otras ofertas.</p>
+      </div>
+    </aside>
+  </div>
+</div>

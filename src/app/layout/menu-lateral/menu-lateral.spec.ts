@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
 import { MenuLateral } from './menu-lateral';
 
 describe('MenuLateral', () => {
@@ -8,6 +9,7 @@ describe('MenuLateral', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [MenuLateral],
+      providers: [provideRouter([])],
     }).compileComponents();
 
     fixture = TestBed.createComponent(MenuLateral);

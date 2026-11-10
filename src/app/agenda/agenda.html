@@ -1,0 +1,123 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex items-end justify-between">
+    <div class="flex flex-col gap-1 whitespace-nowrap">
+      <p class="text-sm text-texto-suave">Semana del 5 al 10 de octubre</p>
+      <h1 class="text-[30px] font-bold text-marino">Agenda</h1>
+    </div>
+    <div class="flex items-center gap-2.5">
+      <div class="flex items-start gap-1 rounded-xl bg-[#e4eaec] p-1 text-sm font-semibold whitespace-nowrap">
+        <button type="button" class="cursor-pointer rounded-[9px] px-4 py-2 text-[#4f5e66]">Día</button>
+        <button type="button" class="cursor-pointer rounded-[9px] bg-white px-4 py-2 text-marino">Semana</button>
+      </div>
+      <button type="button" class="flex size-10 cursor-pointer items-center justify-center rounded-[10px] border border-[#dce3e6] bg-white">
+        <span class="relative block size-4">
+          <img src="icons/chevron-izquierda-oscuro.svg" alt="Semana anterior" class="absolute top-[3.33px] left-[5.33px] max-w-none" />
+        </span>
+      </button>
+      <button type="button" class="flex size-10 cursor-pointer items-center justify-center rounded-[10px] border border-[#dce3e6] bg-white">
+        <span class="relative block size-4">
+          <img src="icons/chevron-derecha-oscuro.svg" alt="Semana siguiente" class="absolute top-[3.33px] left-[5.33px] max-w-none" />
+        </span>
+      </button>
+      <button type="button" class="btn-primario">Solicitudes · 3</button>
+    </div>
+  </header>
+
+  <section class="tarjeta flex flex-col gap-1 p-4">
+    <div class="flex items-start gap-1.5 pb-1.5 text-[13px] font-bold whitespace-nowrap text-[#33444d]">
+      <div class="h-5 w-14 shrink-0"></div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg py-1.5">Lun 5</div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg py-1.5">Mar 6</div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg py-1.5">Mié 7</div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg bg-marino py-1.5 text-white">Jue 8 · Hoy</div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg py-1.5">Vie 9</div>
+      <div class="flex min-w-0 flex-1 justify-center rounded-lg py-1.5">Sáb 10</div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">09:00</p>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Carlos Méndez</p><p class="text-[11px]">Neumáticos</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-en-taller"><p class="text-xs font-bold">Carlos Méndez</p><p class="text-[11px]">Neumáticos</p></div>
+      <div class="cita-pendiente"><p class="text-xs font-bold">Andrés Molina</p><p class="text-[11px]">Aceite</p></div>
+      <div class="celda-libre"></div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">10:00</p>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Pedro Gil</p><p class="text-[11px]">Revisión</p></div>
+      <div class="celda-libre"></div>
+      <div class="cita-pendiente"><p class="text-xs font-bold">Laura Gómez</p><p class="text-[11px]">Revisión</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">11:00</p>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Sofía Navarro</p><p class="text-[11px]">Diagnóstico</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Ana Ruiz</p><p class="text-[11px]">Revisión</p></div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">12:00</p>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Lucía Prieto</p><p class="text-[11px]">ITV</p></div>
+      <div class="celda-libre"></div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">13:00</p>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">16:00</p>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Laura Gómez</p><p class="text-[11px]">Frenos</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Marta López</p><p class="text-[11px]">Frenos</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-cerrada">Cerrado</div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">17:00</p>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Andrés Molina</p><p class="text-[11px]">Embrague</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-cerrada">Cerrado</div>
+    </div>
+
+    <div class="flex items-start gap-1.5">
+      <p class="w-14 shrink-0 pt-1.5 text-xs text-texto-suave">18:00</p>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="celda-libre"></div>
+      <div class="cita-confirmada"><p class="text-xs font-bold">Javier Ortega</p><p class="text-[11px]">Aceite</p></div>
+      <div class="celda-libre"></div>
+      <div class="celda-cerrada">Cerrado</div>
+    </div>
+
+    <div class="flex items-start gap-[18px] pt-2.5 pl-[62px] text-[13px] whitespace-nowrap text-texto-suave">
+      <div class="flex items-center gap-1.5"><span class="size-3 rounded-[3px] bg-petroleo"></span>Confirmada</div>
+      <div class="flex items-center gap-1.5"><span class="size-3 rounded-[3px] bg-naranja"></span>Pendiente de aceptar</div>
+      <div class="flex items-center gap-1.5"><span class="size-3 rounded-[3px] bg-verde-medio"></span>En el taller</div>
+    </div>
+  </section>
+</div>
