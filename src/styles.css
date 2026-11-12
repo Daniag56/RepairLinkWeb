@@ -3,6 +3,17 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
 
+  --text-mini: 11px;
+  --text-nota: 13px;
+  --text-cuerpo: 15px;
+  --text-destacado: 17px;
+  --text-subtitulo: 26px;
+  --text-titulo-acceso: 28px;
+  --text-titulo: 30px;
+  --text-titulo-marca: 32px;
+  --text-cifra: 34px;
+  --text-portada: 40px;
+
   --color-marino: #17394a;
   --color-petroleo: #2c6475;
   --color-naranja: #e8792b;
@@ -15,6 +26,14 @@
   --color-menu: #c9dce2;
   --color-menu-suave: #a9c3cb;
   --color-contador: #14303d;
+
+  --color-texto-medio: #33444d;
+  --color-texto-inactivo: #4f5e66;
+  --color-texto-apagado: #8a969c;
+  --color-borde-campo: #dce3e6;
+  --color-gris: #c5ced2;
+  --color-fondo-suave: #f8fafa;
+  --color-fondo-gris: #e4eaec;
 
   --color-verde-fondo: #e3f2ea;
   --color-verde: #22704a;
