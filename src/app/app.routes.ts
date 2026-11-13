@@ -18,6 +18,7 @@ import { FichaCliente } from './clientes/ficha-cliente/ficha-cliente';
 import { Coches } from './coches/coches';
 import { DetalleReparacion } from './coches/detalle-reparacion/detalle-reparacion';
 import { NuevoPresupuesto } from './coches/nuevo-presupuesto/nuevo-presupuesto';
+import { GuiaEstilos } from './guia-estilos/guia-estilos';
 import { Shell } from './layout/shell/shell';
 import { Mensajes } from './mensajes/mensajes';
 import { AceptarCoche } from './panel/aceptar-coche/aceptar-coche';
@@ -33,6 +34,7 @@ export const routes: Routes = [
   { path: 'recuperar', component: RecuperarContrasena },
   { path: 'recuperar/correo', component: RevisaCorreo },
   { path: 'recuperar/nueva', component: NuevaContrasena },
+  { path: 'estilos', component: GuiaEstilos },
   {
     path: '',
     component: Shell,

@@ -58,6 +58,7 @@ src/
     ├── clientes/                 Clientes
     ├── mensajes/                 Mensajes, lista-conversaciones, conversacion, mensajes-api
     ├── ajustes/                  Ajustes (pestañas), horario, festivos, vacaciones, promociones, ajustes-api
+    ├── guia-estilos/             Página de prueba de los criterios visuales (/estilos)
     └── shared/ui/                logo, chip, badge, avatar
 ```
 
@@ -112,17 +113,78 @@ git pull origin develop
 
 Las tareas se organizan con Scrum en Jira (proyecto EquipoRL, estimación en story points) y el diseño está en Figma (escritorio 1440 × 900, tipografía Inter).
 
-## Paleta
+## Criterios visuales
 
-| Color | Hex | Uso |
+Los colores, la letra y los tamaños se definen una sola vez, en el bloque `@theme` de `src/styles.css`. Lo que se maquete a partir de ahora los usa por su nombre (`bg-marino`, `text-cuerpo`), no con valores sueltos como `text-[#33444d]` o `text-[15px]`. Si hace falta un color o un tamaño nuevo, primero se añade al `@theme`.
+
+La página <http://localhost:4200/estilos> enseña todos los colores, tamaños, espaciados y clases comunes.
+
+### Paleta
+
+| Nombre | Hex | Uso |
 |---|---|---|
-| Azul petróleo | `#173F4F` | Principal |
-| Azul verdoso | `#2F6F82` | Secundario |
-| Gris azulado | `#B8C9CC` | Textos suaves |
-| Naranja | `#E8752A` | Solo para destacar |
-| Blanco roto | `#F4F6F5` | Fondo |
-| Gris oscuro | `#20282B` | Texto |
-| Verde | `#3E8E6B` | Estados correctos |
+| `marino` | `#17394a` | Principal: títulos, botones y menú lateral |
+| `petroleo` | `#2c6475` | Secundario: enlaces y opción activa |
+| `naranja` | `#e8792b` | Solo para destacar |
+| `fondo` | `#f3f5f4` | Fondo de la página |
+| `texto` | `#1c2b33` | Texto normal |
+| `texto-suave` | `#5b6870` | Texto secundario |
+| `verde-medio` | `#2e8a5a` | Estados correctos |
+
+El resto (bordes, fondos suaves y colores de estado) está en `src/styles.css`. El nombre vale para cualquier clase de color: `bg-marino`, `text-marino`, `border-marino`.
+
+### Tipografía
+
+Inter, cargada desde Google Fonts en `src/index.html`, con los pesos `font-medium`, `font-semibold` y `font-bold`.
+
+| Clase | Tamaño | Uso |
+|---|---|---|
+| `text-portada` | 40 px | Titular del acceso |
+| `text-cifra` | 34 px | Cifras del panel |
+| `text-titulo-marca` | 32 px | Titular de registro y recuperar contraseña |
+| `text-titulo` | 30 px | Título de cada página |
+| `text-titulo-acceso` | 28 px | Título de un formulario de acceso |
+| `text-subtitulo` | 26 px | Título de un paso y totales |
+| `text-2xl` | 24 px | Importes |
+| `text-xl` | 20 px | Nombre de la marca |
+| `text-lg` | 18 px | Título de una tarjeta |
+| `text-destacado` | 17 px | Título de una promoción |
+| `text-base` | 16 px | Nombres y botones |
+| `text-cuerpo` | 15 px | Texto de campos y listas |
+| `text-sm` | 14 px | Texto normal |
+| `text-nota` | 13 px | Texto secundario |
+| `text-xs` | 12 px | Etiquetas de estado |
+| `text-mini` | 11 px | Citas de la agenda |
+
+### Espaciado
+
+Se usa la escala de Tailwind: cada paso son 4 px (`gap-4` son 16 px).
+
+| Dónde | Clases |
+|---|---|
+| Página | `flex flex-col gap-6 px-10 pt-8 pb-10` |
+| Tarjeta | `tarjeta p-6` |
+| Entre los campos de un formulario | `gap-4` |
+| Entre los elementos de una lista | `gap-3` |
+| Entre un título y su subtítulo | `gap-1` |
+
+### Botones, campos y otras clases comunes
+
+Están en `src/styles.css`, dentro de `@layer components`.
+
+| Clase | Para qué |
+|---|---|
+| `btn-primario` | Acción principal |
+| `btn-naranja` | Acción que se quiere destacar (una por pantalla) |
+| `btn-secundario` | Acción secundaria: cancelar, volver |
+| `campo` | Cuadro de texto de un formulario |
+| `etiqueta` | Texto encima de un campo |
+| `tarjeta` | Caja blanca con borde |
+| `badge-verde` · `badge-naranja` · `badge-azul` | Estado correcto, pendiente o informativo |
+| `chip-activo` · `chip-inactivo` | Filtros |
+| `pestana` · `pestana activa` | Pestañas |
+| `avatar` | Círculo con las iniciales |
+| `interruptor-on` · `interruptor-off` | Interruptor |
 
 ## Equipo
 

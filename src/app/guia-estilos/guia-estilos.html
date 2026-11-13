@@ -1,0 +1,87 @@
+<div class="flex flex-col gap-6 px-10 pt-8 pb-10">
+  <header class="flex flex-col gap-1">
+    <p class="text-sm text-texto-suave">Criterios visuales comunes de la web del taller</p>
+    <h1 class="text-titulo font-bold text-marino">Guía de estilos</h1>
+  </header>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Colores</h2>
+    <div class="flex flex-wrap gap-4">
+      @for (color of colores; track color.nombre) {
+        <div class="flex w-44 flex-col gap-1">
+          <div class="h-16 rounded-xl border border-borde" [class]="color.clase"></div>
+          <p class="text-sm font-semibold">{{ color.nombre }}</p>
+          <p class="text-xs text-texto-suave">{{ color.uso }}</p>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Tipografía</h2>
+    <p class="text-sm text-texto-suave">
+      Inter en toda la web, con tres pesos: <span class="font-medium">medium</span>,
+      <span class="font-semibold">semibold</span> y <span class="font-bold">bold</span>.
+    </p>
+    @for (tamano of tamanos; track tamano.clase) {
+      <div class="flex items-center gap-6 border-b border-separador pb-3">
+        <div class="flex w-64 shrink-0 flex-col gap-1">
+          <p class="text-sm font-semibold">{{ tamano.clase }}</p>
+          <p class="text-xs text-texto-suave">{{ tamano.px }} px · {{ tamano.uso }}</p>
+        </div>
+        <p class="font-bold text-marino" [class]="tamano.clase">Tu taller, al día</p>
+      </div>
+    }
+  </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Espaciado</h2>
+    <p class="text-sm text-texto-suave">
+      Cada paso son 4 px y vale igual para rellenos (p-6), márgenes (mt-1) y separaciones (gap-4).
+    </p>
+    @for (espacio of espacios; track espacio.clase) {
+      <div class="flex items-center gap-6">
+        <div class="flex w-64 shrink-0 flex-col gap-1">
+          <p class="text-sm font-semibold">{{ espacio.paso }} · {{ espacio.px }} px</p>
+          <p class="text-xs text-texto-suave">{{ espacio.uso }}</p>
+        </div>
+        <div class="h-4 rounded bg-petroleo" [class]="espacio.clase"></div>
+      </div>
+    }
+  </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Botones</h2>
+    <div class="flex flex-wrap items-center gap-4">
+      <button type="button" class="btn-primario">btn-primario</button>
+      <button type="button" class="btn-naranja">btn-naranja</button>
+      <button type="button" class="btn-secundario">btn-secundario</button>
+    </div>
+  </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Campos</h2>
+    <div class="flex gap-4">
+      <label class="min-w-0 flex-1"><span class="etiqueta">etiqueta</span><input type="text" class="campo" placeholder="campo vacío" /></label>
+      <label class="min-w-0 flex-1"><span class="etiqueta">etiqueta</span><input type="text" class="campo" value="campo con texto" /></label>
+    </div>
+  </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Estados y selectores</h2>
+    <div class="flex flex-wrap items-center gap-4">
+      <span class="badge-verde">badge-verde</span>
+      <span class="badge-naranja">badge-naranja</span>
+      <span class="badge-azul">badge-azul</span>
+      <button type="button" class="chip-activo">chip-activo</button>
+      <button type="button" class="chip-inactivo">chip-inactivo</button>
+      <span class="avatar size-11 text-cuerpo">LG</span>
+      <span class="interruptor-on"></span>
+      <span class="interruptor-off"></span>
+    </div>
+    <nav class="flex w-fit items-start gap-1 rounded-xl bg-fondo-gris p-1">
+      <a class="pestana activa">pestana activa</a>
+      <a class="pestana">pestana</a>
+    </nav>
+  </section>
+</div>
