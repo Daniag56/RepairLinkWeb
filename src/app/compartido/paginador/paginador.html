@@ -1,1 +1,24 @@
-<p>paginador works!</p>
+<nav class="flex items-center justify-between" aria-label="Paginación">
+  <p class="text-sm text-texto-suave">
+    Página <span class="font-semibold text-texto">{{ paginaActual() }}</span> de {{ totalPaginas() }}
+  </p>
+
+  <div class="flex items-center gap-2">
+    <button
+      type="button"
+      class="flex cursor-pointer items-center gap-2 rounded-xl border border-borde-campo bg-white px-4 py-2.5 text-sm font-semibold text-marino disabled:cursor-default disabled:opacity-40"
+      [disabled]="paginaActual() <= 1"
+    >
+      <img src="icons/chevron-izquierda-oscuro.svg" alt="" />
+      Anterior
+    </button>
+    <button
+      type="button"
+      class="flex cursor-pointer items-center gap-2 rounded-xl border border-borde-campo bg-white px-4 py-2.5 text-sm font-semibold text-marino disabled:cursor-default disabled:opacity-40"
+      [disabled]="paginaActual() >= totalPaginas()"
+    >
+      Siguiente
+      <img src="icons/chevron-derecha-oscuro.svg" alt="" />
+    </button>
+  </div>
+</nav>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrl: './paginador.css',
   templateUrl: './paginador.html',
 })
-export class Paginador {}
+export class Paginador {
+  paginaActual = input(1);
+  totalPaginas = input(1);
+}
