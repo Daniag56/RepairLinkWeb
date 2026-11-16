@@ -84,4 +84,17 @@
       <a class="pestana">pestana</a>
     </nav>
   </section>
+
+  <section class="tarjeta flex flex-col gap-4 p-6">
+    <h2 class="text-lg font-bold text-marino">Estados de los listados</h2>
+    <div class="flex gap-4">
+      <div class="tarjeta min-w-0 flex-1">
+        <app-estado-carga texto="Cargando clientes…" />
+      </div>
+      <div class="tarjeta min-w-0 flex-1">
+        <app-sin-resultados titulo="No hay clientes" descripcion="Prueba con otro nombre, teléfono o matrícula." />
+      </div>
+    </div>
+    <app-mensaje-error titulo="No se han podido cargar los clientes" descripcion="Revisa tu conexión e inténtalo de nuevo." />
+  </section>
 </div>

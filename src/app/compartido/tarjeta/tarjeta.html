@@ -1,0 +1,12 @@
+<div class="tarjeta flex flex-col">
+  @if (titulo()) {
+    <div class="flex items-center justify-between border-b border-separador px-6 pt-[18px] pb-4 whitespace-nowrap">
+      <h2 class="text-lg font-bold text-marino">{{ titulo() }}</h2>
+      @if (enlace()) {
+        <a class="cursor-pointer text-sm font-medium text-petroleo">{{ enlace() }}</a>
+      }
+    </div>
+  }
+
+  <ng-content />
+</div>

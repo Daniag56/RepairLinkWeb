@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Confirmacion } from '../../compartido/confirmacion';
 
 @Component({
   imports: [],
@@ -6,4 +7,12 @@ import { Component } from '@angular/core';
   styleUrl: './festivos.css',
   templateUrl: './festivos.html',
 })
-export class Festivos {}
+export class Festivos {
+  private confirmacion = inject(Confirmacion);
+
+  quitarFestivo(nombre:string){
+    if(this.confirmacion.preguntar("¿Está seguro de que desea quitar el festivo " + nombre + "?")){
+      console.log("Festivo quitado: " + nombre);
+    }
+  }
+}

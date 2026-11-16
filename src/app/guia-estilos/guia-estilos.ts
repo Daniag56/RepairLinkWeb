@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { EstadoCarga } from '../compartido/estado-carga/estado-carga';
+import { MensajeError } from '../compartido/mensaje-error/mensaje-error';
+import { SinResultados } from '../compartido/sin-resultados/sin-resultados';
 
 @Component({
-  imports: [],
+  imports: [EstadoCarga, MensajeError, SinResultados],
   selector: 'app-guia-estilos',
   styleUrl: './guia-estilos.css',
   templateUrl: './guia-estilos.html',
