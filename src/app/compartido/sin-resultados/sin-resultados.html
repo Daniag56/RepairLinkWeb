@@ -1,0 +1,9 @@
+<div class="flex flex-col items-center justify-center gap-3 px-6 py-12 text-center">
+  <span class="flex size-12 items-center justify-center rounded-full bg-azul-fondo">
+    <img src="icons/buscar.svg" alt="" class="size-5" />
+  </span>
+  <p class="text-base font-semibold text-texto">{{ titulo() }}</p>
+  @if (descripcion()) {
+    <p class="max-w-sm text-sm text-texto-suave">{{ descripcion() }}</p>
+  }
+</div>

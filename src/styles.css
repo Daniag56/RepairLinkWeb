@@ -44,6 +44,8 @@
   --color-azul: #2c4d5b;
   --color-verde-medio: #2e8a5a;
   --color-verde-oscuro: #1c5a3b;
+  --color-rojo-fondo: #fdecec;
+  --color-rojo: #b42318;
 }
 
 @layer base {
