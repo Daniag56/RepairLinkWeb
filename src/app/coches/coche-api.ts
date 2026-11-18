@@ -6,7 +6,6 @@ import { Coche } from './coche';
   providedIn: 'root',
 })
 export class CocheApi {
-  // Datos simulados. Cuando haya API se cambiará of() por HttpClient.
   private coches: Coche[] = [
     { id: 1, marca: 'Renault', modelo: 'Clio 3', matricula: '4821 KLM', cliente: 'Laura Gómez', trabajo: 'Cambio de pastillas y discos', estado: 'en_reparacion', fechaEntrada: new Date('2026-10-05') },
     { id: 2, marca: 'SEAT', modelo: 'León', matricula: '7730 HPT', cliente: 'Marta López', trabajo: 'Revisión de frenos', estado: 'en_revision', fechaEntrada: new Date('2026-10-08') },
