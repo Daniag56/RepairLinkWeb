@@ -3,6 +3,7 @@ import { SinResultados } from '../compartido/sin-resultados/sin-resultados';
 import { CocheApi } from './coche-api';
 import { Coche } from './coche';
 import { FilaCoche } from './fila-coche/fila-coche';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [SinResultados, FilaCoche],
@@ -12,6 +13,7 @@ import { FilaCoche } from './fila-coche/fila-coche';
 })
 export class Coches implements OnInit {
   private cocheApi = inject(CocheApi);
+  private router = inject(Router);
   coches: Coche[] = [];
 
   ngOnInit(): void {
@@ -25,6 +27,6 @@ export class Coches implements OnInit {
   }
 
   onSeleccionarCoche(coche: Coche): void {
-    console.log('Coche seleccionado:', coche.id,coche.marca, coche.modelo, coche.matricula, coche.cliente, coche.trabajo, coche.estado, coche.fechaEntrada);
+    this.router.navigate(['/coches', coche.id]);
   }
 }

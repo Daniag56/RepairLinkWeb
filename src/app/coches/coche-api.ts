@@ -19,4 +19,7 @@ export class CocheApi {
   getCoches(): Observable<Coche[]> {
     return of(this.coches);
   }
+  getCoche(id: number): Observable<Coche | undefined> {
+    return of(this.coches.find(coche => coche.id === id));
+  }
 }
