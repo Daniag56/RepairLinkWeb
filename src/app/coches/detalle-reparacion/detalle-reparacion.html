@@ -22,13 +22,23 @@
         <div class="flex h-[54px] gap-3.5"><div class="flex flex-col items-center gap-1"><span class="flex size-6 shrink-0 items-center justify-center rounded-md bg-naranja"><img src="icons/logo-llave.svg" alt="" class="size-4" /></span><span class="w-0.5 flex-1 bg-borde"></span></div><div class="flex flex-col gap-0.5"><p class="text-[15px] font-bold text-naranja-oscuro">En reparación</p><p class="text-[13px] text-texto-suave">{{ coche.trabajo }}</p></div></div>
         <div class="flex h-[49px] gap-3.5"><span class="size-6 shrink-0 rounded-md border-2 border-borde"></span><div class="flex flex-col gap-0.5"><p class="text-[15px] font-semibold text-texto-suave">Listo para recoger</p><p class="text-[13px] text-texto-suave">Se avisará al cliente automáticamente</p></div></div>
 
-        <div class="flex items-end justify-between gap-4 rounded-xl bg-fondo p-3.5">
-          <div class="min-w-0 flex-1">
+        <form [formGroup]="estadoForm" (ngSubmit)="guardarEstado()" class="flex items-start justify-between gap-4 rounded-xl bg-fondo p-3.5">
+          <label class="min-w-0 flex-1">
             <span class="etiqueta">Actualizar estado</span>
-            <span class="campo flex items-center justify-between">Listo para recoger<img src="icons/chevron-abajo.svg" alt="" class="size-[18px]" /></span>
-          </div>
-          <button type="button" class="btn-naranja shrink-0">Guardar y avisar</button>
-        </div>
+            <select formControlName="estado" class="campo">
+              <option value="">Selecciona un estado</option>
+              <option value="en_revision">En revisión</option>
+              <option value="esperando_presupuesto">Esperando presupuesto</option>
+              <option value="piezas_en_camino">Piezas en camino</option>
+              <option value="en_reparacion">En reparación</option>
+              <option value="listo">Listo</option>
+            </select>
+            @if (estadoForm.controls.estado.touched && estadoForm.controls.estado.hasError('required')) {
+              <p class="mt-1.5 text-sm text-rojo">⚠ Selecciona un estado.</p>
+            }
+          </label>
+          <button type="submit" class="btn-naranja mt-7 shrink-0" [disabled]="estadoForm.invalid">Guardar y avisar</button>
+        </form>
       </section>
 
       <aside class="flex w-[380px] shrink-0 flex-col gap-4">

@@ -201,4 +201,8 @@
   .cita-en-taller {
     @apply border-l-3 border-verde-medio bg-verde-fondo text-verde-oscuro;
   }
+
+  .campo.ng-touched.ng-invalid {
+    @apply border-rojo;
+  }
 }

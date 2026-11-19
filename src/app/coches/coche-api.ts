@@ -22,4 +22,11 @@ export class CocheApi {
   getCoche(id: number): Observable<Coche | undefined> {
     return of(this.coches.find(coche => coche.id === id));
   }
+
+  updateCoche(cocheActualizado: Coche): Observable<Coche> {
+    this.coches = this.coches.map((coche) => (coche.id ===
+      cocheActualizado.id ? cocheActualizado : coche)
+    );
+    return of(cocheActualizado);
+  }
 }
