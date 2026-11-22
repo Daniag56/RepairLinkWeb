@@ -1,28 +1,26 @@
+
 <app-tarjeta titulo="Citas de hoy" enlace="Ver todas">
-  <div class="flex items-center gap-4 border-b border-separador px-6 py-4">
-    <p class="flex h-[22px] w-14 shrink-0 items-center text-base font-bold text-marino">09:00</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
-      <p class="text-[15px] font-semibold text-texto">Carlos Méndez</p>
-      <p class="text-[13px] text-texto-suave">Peugeot 208 · Neumáticos</p>
-    </div>
-    <span class="badge-verde shrink-0">✓ En taller</span>
-  </div>
+  <app-tarjeta-cita
+    hora="09:00"
+    cliente="Carlos Méndez"
+    vehiculo="Peugeot 208"
+    motivo="Neumáticos"
+    estado="En taller"
+  />
 
-  <div class="flex items-center gap-4 border-b border-separador px-6 py-4">
-    <p class="flex h-[22px] w-14 shrink-0 items-center text-base font-bold text-marino">16:30</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
-      <p class="text-[15px] font-semibold text-texto">Marta López</p>
-      <p class="text-[13px] text-texto-suave">SEAT León · Frenos</p>
-    </div>
-    <button type="button" class="shrink-0 cursor-pointer rounded-full bg-marino px-3.5 py-[9px] text-[13px] font-semibold whitespace-nowrap text-white">Aceptar coche</button>
-  </div>
+  <app-tarjeta-cita
+    hora="16:30"
+    cliente="Marta López"
+    vehiculo="SEAT León"
+    motivo="Frenos"
+    estado="Pendiente"
+  />
 
-  <div class="flex items-center gap-4 px-6 py-4">
-    <p class="flex h-[22px] w-14 shrink-0 items-center text-base font-bold text-marino">18:00</p>
-    <div class="flex min-w-0 flex-1 flex-col gap-0.5 whitespace-nowrap">
-      <p class="text-[15px] font-semibold text-texto">Javier Ortega</p>
-      <p class="text-[13px] text-texto-suave">Ford Focus · Aceite</p>
-    </div>
-    <span class="badge-azul shrink-0">Por llegar</span>
-  </div>
+  <app-tarjeta-cita
+    hora="18:00"
+    cliente="Javier Ortega"
+    vehiculo="Ford Focus"
+    motivo="Aceite"
+    estado="Por llegar"
+  />
 </app-tarjeta>

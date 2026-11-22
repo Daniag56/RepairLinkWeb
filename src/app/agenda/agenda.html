@@ -23,6 +23,25 @@
     </div>
   </header>
 
+
+  <!-- Calendario mensual -->
+  <section class="tarjeta p-4">
+    <div class="mb-4">
+      <h2 class="text-lg font-bold text-marino">Calendario mensual</h2>
+      <p class="text-sm text-texto-suave">
+        Consulta la disponibilidad de citas del taller
+      </p>
+    </div>
+
+    <app-calendario-mensual
+      (diaSeleccionado)="seleccionarDia($event)"
+    />
+  </section>
+
+  <!-- Horas del día seleccionado -->
+  <app-lista-horas [fecha]="fechaSeleccionada" />
+
+
   <section class="tarjeta flex flex-col gap-1 p-4">
     <div class="flex items-start gap-1.5 pb-1.5 text-[13px] font-bold whitespace-nowrap text-[#33444d]">
       <div class="h-5 w-14 shrink-0"></div>

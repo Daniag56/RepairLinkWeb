@@ -1,0 +1,39 @@
+<div class="rounded-xl border border-separador bg-white p-5">
+  <div class="mb-5">
+    <h2 class="text-lg font-bold text-marino">Horas disponibles</h2>
+    <p class="mt-1 text-sm capitalize text-texto-suave">
+      {{ fechaFormateada }}
+    </p>
+  </div>
+
+  <div class="flex flex-col gap-3">
+    @for (hora of horas; track hora.hora) {
+      <div
+        class="flex items-center justify-between gap-4 rounded-lg border p-3"
+        [class.border-separador]="!hora.ocupada"
+        [class.bg-fondo]="!hora.ocupada"
+        [class.border-naranja]="hora.ocupada"
+        [class.bg-naranja-fondo]="hora.ocupada"
+      >
+        <div>
+          <p class="text-sm font-bold text-marino">{{ hora.hora }}</p>
+
+          @if (hora.ocupada) {
+            <p class="mt-1 text-xs text-texto-suave">
+              {{ hora.cliente }} · {{ hora.motivo }}
+            </p>
+          } @else {
+            <p class="mt-1 text-xs text-texto-suave">Disponible</p>
+          }
+        </div>
+
+        @if (hora.ocupada) {
+          <span class="badge-naranja shrink-0">Ocupada</span>
+        } @else {
+          <span class="badge-verde shrink-0">Libre</span>
+        }
+      </div>
+    }
+  </div>
+</div>
+
