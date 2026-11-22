@@ -1,0 +1,23 @@
+
+<div class="flex items-center gap-4 border-b border-separador px-6 py-4 last:border-b-0">
+  <div class="flex min-w-16 flex-col items-center">
+    <span class="text-sm font-bold text-marino">{{ hora() }}</span>
+  </div>
+
+  <div class="min-w-0 flex-1">
+    <p class="truncate text-sm font-semibold text-marino">
+      {{ cliente() }}
+    </p>
+    <p class="mt-1 text-sm text-texto-suave">
+      {{ vehiculo() }} · {{ motivo() }}
+    </p>
+  </div>
+
+  @if (estado() === 'En taller') {
+    <span class="badge-verde shrink-0">{{ estado() }}</span>
+  } @else if (estado() === 'Por llegar') {
+    <span class="badge-azul shrink-0">{{ estado() }}</span>
+  } @else {
+    <span class="badge-naranja shrink-0">{{ estado() }}</span>
+  }
+</div>
