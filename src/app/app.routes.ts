@@ -25,6 +25,7 @@ import { AceptarCoche } from './panel/aceptar-coche/aceptar-coche';
 import { Panel } from './panel/panel';
 import { Solicitudes } from './panel/solicitudes/solicitudes';
 import { Perfil } from './perfil/perfil';
+import { authGuard } from './auth/auth-guard';
 
 export const routes: Routes = [
   { path: 'login', component: Login },
@@ -35,6 +36,7 @@ export const routes: Routes = [
   { path: 'recuperar/correo', component: RevisaCorreo },
   { path: 'recuperar/nueva', component: NuevaContrasena },
   { path: 'estilos', component: GuiaEstilos },
+  { path: 'panel', component: Panel, canActivate: [authGuard] },
   {
     path: '',
     component: Shell,
