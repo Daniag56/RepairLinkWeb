@@ -25,10 +25,10 @@ import { AceptarCoche } from './panel/aceptar-coche/aceptar-coche';
 import { Panel } from './panel/panel';
 import { Solicitudes } from './panel/solicitudes/solicitudes';
 import { Perfil } from './perfil/perfil';
-import { authGuard } from './auth/auth-guard';
+import { authGuard, guestGuard } from './auth/auth-guard';
 
 export const routes: Routes = [
-  { path: 'login', component: Login },
+  { path: 'login', component: Login, canActivate: [guestGuard] },
   { path: 'registro', component: RegistroAcceso },
   { path: 'registro/taller', component: RegistroTaller },
   { path: 'registro/completado', component: RegistroCompletado },
@@ -36,7 +36,6 @@ export const routes: Routes = [
   { path: 'recuperar/correo', component: RevisaCorreo },
   { path: 'recuperar/nueva', component: NuevaContrasena },
   { path: 'estilos', component: GuiaEstilos },
-  { path: 'panel', component: Panel, canActivate: [authGuard] },
   {
     path: '',
     component: Shell,
@@ -63,6 +62,12 @@ export const routes: Routes = [
           { path: 'festivos', component: Festivos },
           { path: 'vacaciones', component: Vacaciones },
           { path: 'promociones', component: Promociones },
+          {path: '', component: Shell, canActivate: [authGuard], children:
+            [
+              {path: '', pathMatch: 'full', redirectTo: 'panel'},
+              {path: 'panel', component: Panel},
+            ]
+          },
         ],
       },
     ],
