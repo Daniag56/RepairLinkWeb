@@ -25,9 +25,10 @@ import { AceptarCoche } from './panel/aceptar-coche/aceptar-coche';
 import { Panel } from './panel/panel';
 import { Solicitudes } from './panel/solicitudes/solicitudes';
 import { Perfil } from './perfil/perfil';
+import { authGuard, guestGuard } from './auth/auth-guard';
 
 export const routes: Routes = [
-  { path: 'login', component: Login },
+  { path: 'login', component: Login, canActivate: [guestGuard] },
   { path: 'registro', component: RegistroAcceso },
   { path: 'registro/taller', component: RegistroTaller },
   { path: 'registro/completado', component: RegistroCompletado },
@@ -38,6 +39,7 @@ export const routes: Routes = [
   {
     path: '',
     component: Shell,
+    canActivate: [authGuard],
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'panel' },
       { path: 'panel', component: Panel },
