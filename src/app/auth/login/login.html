@@ -1,5 +1,19 @@
-<div class="flex min-h-screen">
-  <section class="flex w-[52.8%] shrink-0 flex-col justify-between bg-marino px-16 py-14">
+<div class="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-marino px-8 py-14">
+  <!-- Fondo: brillos de color y logo grande difuminado -->
+  <div aria-hidden="true" class="pointer-events-none absolute inset-0 select-none">
+    <div class="absolute -top-40 -left-40 size-[560px] rounded-full bg-petroleo opacity-60 blur-3xl"></div>
+    <div class="absolute -right-32 -bottom-48 size-[520px] rounded-full bg-naranja opacity-25 blur-3xl"></div>
+
+    <div class="absolute inset-0 flex items-center justify-center gap-10 opacity-20 blur-sm">
+      <div class="flex size-52 shrink-0 items-center justify-center rounded-[56px] bg-naranja">
+        <img src="icons/logo-llave.svg" alt="" class="size-32" />
+      </div>
+      <p class="text-[180px] leading-none font-bold whitespace-nowrap text-white">Repair<span class="text-naranja-claro">Link</span></p>
+    </div>
+  </div>
+
+  <!-- Tarjeta de acceso centrada -->
+  <div class="relative flex flex-col items-center gap-8">
     <div class="flex items-center gap-2.5">
       <div class="flex h-9 items-center justify-center overflow-clip rounded-[10.08px] bg-naranja">
         <span class="relative block size-5">
@@ -9,50 +23,56 @@
       <p class="text-xl font-bold whitespace-nowrap text-white">Repair<span class="text-naranja-claro">Link</span></p>
     </div>
 
-    <div class="flex flex-col gap-6">
-      <div class="flex items-center gap-3.5">
-        <span class="flex size-16 items-center justify-center rounded-full bg-petroleo">
-          <img src="icons/logo-llave.svg" alt="" class="size-7 brightness-0 invert" />
-        </span>
-        <span class="h-0.5 w-10 bg-petroleo"></span>
-        <span class="flex size-16 items-center justify-center rounded-full bg-petroleo">
-          <img src="icons/menu-coches.svg" alt="" class="size-7 brightness-0 invert" />
-        </span>
-      </div>
-      <h1 class="text-[40px] leading-12 font-bold text-white">Gestiona tu taller desde el navegador</h1>
-      <p class="text-lg leading-7 text-menu">Citas del día, coches en el taller, chat con tus clientes y la configuración del taller en un mismo panel.</p>
-      <ul class="flex flex-col gap-3.5 text-base text-white">
-        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Citas y coches del día de un vistazo</li>
-        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Chat directo con tus clientes</li>
-        <li class="flex items-center gap-3"><img src="icons/check-naranja.svg" alt="" class="size-5" />Horarios, festivos, vacaciones y promociones</li>
-      </ul>
-    </div>
-
-    <p class="text-sm text-menu-suave">¿Eres cliente? Descarga la app de RepairLink para Android.</p>
-  </section>
-
-  <section class="flex flex-1 items-center justify-center px-8">
-    <form class="tarjeta flex w-[420px] flex-col gap-5 p-10">
+    <form [formGroup]="loginForm" (ngSubmit)="entrar()" class="tarjeta flex w-[420px] max-w-full flex-col gap-5 border-0 p-10 shadow-2xl">
       <div class="flex flex-col gap-1.5">
         <h2 class="text-[28px] font-bold text-marino">Acceso para talleres</h2>
         <p class="text-[15px] text-texto-suave">Entra en el panel de tu taller</p>
       </div>
+
+      @if (error()) {
+        <p class="rounded-xl bg-rojo-fondo px-4 py-3 text-sm text-rojo">⚠ {{ error() }}</p>
+      }
+
       <label>
         <span class="etiqueta">Correo del taller</span>
-        <input type="email" class="campo" placeholder="taller@correo.com" />
+        <input type="email" formControlName="email" class="campo" placeholder="taller@correo.com" />
+        @if (loginForm.controls.email.touched && loginForm.controls.email.hasError('required')) {
+          <p class="mt-1.5 text-sm text-rojo">⚠ Escribe el correo.</p>
+        }
+        @if (loginForm.controls.email.touched && loginForm.controls.email.hasError('email')) {
+          <p class="mt-1.5 text-sm text-rojo">⚠ El correo no es válido.</p>
+        }
       </label>
+
       <label>
         <span class="etiqueta">Contraseña</span>
-        <input type="password" class="campo" placeholder="••••••••" />
+        <input type="password" formControlName="password" class="campo" placeholder="••••••••" />
+        @if (loginForm.controls.password.touched && loginForm.controls.password.hasError('required')) {
+          <p class="mt-1.5 text-sm text-rojo">⚠ Escribe la contraseña.</p>
+        }
+        @if (loginForm.controls.password.touched && loginForm.controls.password.hasError('minlength')) {
+          <p class="mt-1.5 text-sm text-rojo">⚠ La contraseña tiene al menos 8 caracteres.</p>
+        }
       </label>
+
       <div class="flex items-center justify-between text-sm">
         <label class="flex items-center gap-2 text-[#33444d]">
           <input type="checkbox" class="size-[18px] accent-petroleo" />Recordarme
         </label>
-        <a class="cursor-pointer font-semibold text-marino">¿Has olvidado la contraseña?</a>
+        <a routerLink="/recuperar" class="cursor-pointer font-semibold text-marino">¿Has olvidado la contraseña?</a>
       </div>
-      <button type="button" class="btn-naranja">Entrar</button>
-      <p class="text-center text-sm text-texto-suave">¿Tu taller aún no está en RepairLink? <a class="cursor-pointer font-semibold text-marino">Regístralo</a></p>
+
+      <button type="submit" class="btn-naranja" [disabled]="loginForm.invalid || enviando()">
+        @if (enviando()) {
+          Entrando...
+        } @else {
+          Entrar
+        }
+      </button>
+
+      <p class="text-center text-sm text-texto-suave">¿Tu taller aún no está en RepairLink? <a routerLink="/registro" class="cursor-pointer font-semibold text-marino">Regístralo</a></p>
     </form>
-  </section>
+
+    <p class="text-sm text-menu-suave">¿Eres cliente? Descarga la app de RepairLink para Android.</p>
+  </div>
 </div>

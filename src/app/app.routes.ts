@@ -39,6 +39,7 @@ export const routes: Routes = [
   {
     path: '',
     component: Shell,
+    canActivate: [authGuard],
     children: [
       { path: '', pathMatch: 'full', redirectTo: 'panel' },
       { path: 'panel', component: Panel },
@@ -62,12 +63,6 @@ export const routes: Routes = [
           { path: 'festivos', component: Festivos },
           { path: 'vacaciones', component: Vacaciones },
           { path: 'promociones', component: Promociones },
-          {path: '', component: Shell, canActivate: [authGuard], children:
-            [
-              {path: '', pathMatch: 'full', redirectTo: 'panel'},
-              {path: 'panel', component: Panel},
-            ]
-          },
         ],
       },
     ],
